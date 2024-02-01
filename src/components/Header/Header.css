@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap');
+
+
+.navbar {
+   display: flex;
+   align-items: center;
+    padding: 8px 2rem;
+    /* gap: 18px; */
+    justify-content: space-between;
+}
+
+.logo-icon {
+    display: flex;
+    gap: 6px;
+    /* align-items: center; */
+}
+
+.logo-icon > span {
+    font-family: 'Tektur', sans-serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #691E1E;
+}
