@@ -1,15 +1,15 @@
-import AdsLine from './components/Adsline/Adsline.jsx';
-import Header from './components/Header/Header.jsx';
-
+import AdsLine from "./components/Adsline/Adsline.jsx";
+import DealsLine from "./components/DealsLine/Dealsline.jsx";
+import Header from "./components/Header/Header.jsx";
 
 function App() {
-
   return (
     <>
-  <AdsLine />
-  <Header />
+      <AdsLine />
+      <Header />
+      <DealsLine />
     </>
-  )
+  );
 }
 
-export default App
+export default App;

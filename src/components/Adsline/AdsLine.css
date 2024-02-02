@@ -1,18 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap');
 
 
-.ads {
+.adsParent {
+    display: flex;
+    justify-content: space-between;
     padding: 8px 2rem;
+    background-color: #232f3e;
+    font-family: 'Manrope', sans-serif;
+}
+
+.adsParent > div {
+    background-color: #232f3e;
+    color: #ffffff;
+}
+
+.ads {
     display: flex;
     gap: 10px;
-    background-color: #232f3e;
-    /* background-color: #323232; */
-    color: #ffffff;
+
+
 }
 
 .ads > span {
     cursor: pointer;
-    font-family: 'Manrope', sans-serif;
     font-size: 14px;
     font-weight: 200;
     background-color: #232f3e;
