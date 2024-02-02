@@ -1,11 +1,11 @@
-// import "./OtherHitems.css";
+import '../OtherHitems.css';
 
 import { IoIosHeartEmpty } from "react-icons/io";
 
-export default function PrevPurchasedItems() {
+export default function FormelyAquiredProd() {
   return (
-    <div>
-      <IoIosHeartEmpty />
+    <div className='navFlex'>
+      <IoIosHeartEmpty size={25}/>
       <span className="space">
         <span>Formerly</span>
         <span>Acquired</span>

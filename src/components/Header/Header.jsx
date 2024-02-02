@@ -1,7 +1,7 @@
 import Section from "./Sections/Section";
 import Facilities from "./Facilities/Facilities";
 import SearchBar from "../SearchBar/SearchBar";
-import PrevPurchasedItems from "./PrevPurchased/PrevPurchasedItems";
+import PrevPurchasedItems from "./FormelyAquiredProd/FormerlyAquiredProd";
 import SignIn from "./SignIn/SignIn";
 import ShoppingCart from "./ShoppingCart/ShoppingCart";
 import { FaGlobeAmericas } from "react-icons/fa";

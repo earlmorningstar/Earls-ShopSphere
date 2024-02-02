@@ -1,9 +1,10 @@
+import '../OtherHitems.css';
 import { TfiLayoutGrid2 } from "react-icons/tfi";
 
 export default function Facilities() {
     return (
-        <div>
-      <TfiLayoutGrid2 />
+        <div className='navFlex'>
+      <TfiLayoutGrid2 size={20}/>
         <span>Facilities</span>
       </div>
     )
