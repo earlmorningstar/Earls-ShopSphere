@@ -17,8 +17,6 @@
 .ads {
     display: flex;
     gap: 10px;
-
-
 }
 
 .ads > span {

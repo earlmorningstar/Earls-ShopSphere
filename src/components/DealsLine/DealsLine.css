@@ -7,6 +7,7 @@
 }
 
 .dealsTitle {
+    cursor: pointer;
     font-family: 'Nunito Sans', sans-serif;
     font-size: 13px;
     font-weight: 700;
@@ -17,6 +18,12 @@
     align-items: center;
     justify-content: space-between;
     padding: 8px 2rem;
+}
+
+.hdywyiParent {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
 }
 
 /* font-family: 'Ubuntu Condensed', sans-serif; */
