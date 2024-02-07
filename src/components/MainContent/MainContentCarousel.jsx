@@ -2,14 +2,14 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import "./MainContentCarousel.css";
-import { NextArrow, PrevArrow } from "./Arrow";
-
+import MainContentOppositeSide from "./MainContentOppositeSide.jsx";
 import firstSlide from "../../assets/Style5.jpg";
-// import secondSlide from "../../assets/Style7.jpg";
 import thirdSlide from "../../assets/Style8.jpg";
 import fourthSlide from "../../assets/Style10.jpg";
 import fifthSlide from "../../assets/Style11.jpg";
 import sixSlide from "../../assets/Style12.jpg";
+import pbTablet from "../../assets/PBtablet.jpg";
+// import { NextArrow, PrevArrow } from "./Arrow";
 
 export default function MainContentCarousel() {
   const carouselSettings = {
@@ -20,34 +20,40 @@ export default function MainContentCarousel() {
     slidesToScroll: 1,
     autoplay: true,
     autoplaySpeed: 4000,
-    nextArrow: <NextArrow />,
-    prevArrow: <PrevArrow />,
+    // nextArrow: <NextArrow />,
+    // prevArrow: <PrevArrow />,
   };
 
   return (
-    <div className="carouselParent">
-      <Slider {...carouselSettings}>
-        <div className="slideImagesParent">
-          <img className="slideImges" src={firstSlide} alt="Image 1" />
-        </div>
-        {/* <div className="slideImagesParent">
-          <img className="slideImges" src={secondSlide} alt="Image 2" />
-        </div> */}
-        <div className="slideImagesParent">
-          <img className="slideImges" src={thirdSlide} alt="Image 3" />
-        </div>
-        <div className="slideImagesParent">
-          <img className="slideImges" src={fourthSlide} alt="Image 4" />
-        </div>
-        <div className="slideImagesParent">
-          <img className="slideImges" src={fifthSlide} alt="Image 5" />
-        </div>
-        <div className="slideImagesParent">
-          <img className="slideImges" src={sixSlide} alt="Image 6" />
-        </div>
-      </Slider>
-
-
+    <div className="overallH">
+      <div className="carouselParent">
+        <Slider {...carouselSettings}>
+          <div className="slideImagesParent">
+            <img className="slideImges" src={firstSlide} alt="Image 1" />
+          </div>
+          <div className="slideImagesParent">
+            <img className="slideImges" src={thirdSlide} alt="Image 3" />
+          </div>
+          <div className="slideImagesParent">
+            <img className="slideImges" src={fourthSlide} alt="Image 4" />
+          </div>
+          <div className="slideImagesParent">
+            <img className="slideImges" src={fifthSlide} alt="Image 5" />
+          </div>
+          <div className="slideImagesParent">
+            <img className="slideImges" src={sixSlide} alt="Image 6" />
+          </div>
+        </Slider>
+      </div>
+      <div>
+        <MainContentOppositeSide imageSrc={pbTablet}>
+          <div className="alternate-content">
+            <span>BEST SALE</span>
+            <span>IPad Air</span>
+            <span>From $599 or $49.91/mo. for 12mo.</span>
+          </div>
+        </MainContentOppositeSide>
+      </div>
     </div>
   );
 }

@@ -1,21 +1,59 @@
 .carouselParent {
-  max-width: 100%;
-  margin: 0 auto;
-  /* margin-right: auto; */
-  /* overflow-x: hidden; */
+  width: 50%;
+  height: 70vh;
+  margin: 0 22px;
 }
 
 .slideImagesParent {
-  height: 60vh;
-  width: 40px;
+  height: 70vh;
+  width: 100%;
   background-color: green;
-  border: 3px solid red;
-  border-radius: 8px;
 }
 
 .slideImges {
-  /* display: block; */
+  display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
 }
+
+.overallH {
+  display: flex;
+}
+
+.main-content-opposite-side {
+  display: flex;
+  background-color: pink;
+}
+
+.alternate-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.image-container {
+  width: 70px;
+  height: 20vh;
+}
+
+.mcosImage {
+  width: 100%;
+  height: 100%;
+}
+
+/* .slick-arrow {
+  font-size: 24px; /
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  background-color: black;
+  color: blue;
+}
+
+.slick-prev {
+  left: 10px; 
+}
+
+.slick-next {
+  right: 10px; 
+} */
