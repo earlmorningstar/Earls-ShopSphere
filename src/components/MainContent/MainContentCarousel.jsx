@@ -45,14 +45,20 @@ export default function MainContentCarousel() {
           </div>
         </Slider>
       </div>
+
       <div>
-        <MainContentOppositeSide imageSrc={pbTablet}>
-          <div className="alternate-content">
-            <span>BEST SALE</span>
-            <span>IPad Air</span>
-            <span>From $599 or $49.91/mo. for 12mo.</span>
-          </div>
-        </MainContentOppositeSide>
+        <MainContentOppositeSide
+          imageSrc={pbTablet}
+          titleType="BEST SALE"
+          prodTitle="IPad Air"
+          prodText="From $599 or $49.91/mo. for 12mo."
+        />
+        {/* <div>
+            <h3>BEST SALE</h3>
+            <h4>IPad Air</h4>
+            <p>From $599 or $49.91/mo. for 12mo.</p>
+          </div> */}
+        {/* </MainContentOppositeSide> */}
       </div>
     </div>
   );
