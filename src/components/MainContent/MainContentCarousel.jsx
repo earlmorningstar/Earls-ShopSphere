@@ -9,6 +9,7 @@ import fourthSlide from "../../assets/Style10.jpg";
 import fifthSlide from "../../assets/Style11.jpg";
 import sixSlide from "../../assets/Style12.jpg";
 import pbTablet from "../../assets/PBtablet.jpg";
+
 // import { NextArrow, PrevArrow } from "./Arrow";
 
 export default function MainContentCarousel() {
@@ -47,18 +48,8 @@ export default function MainContentCarousel() {
       </div>
 
       <div>
-        <MainContentOppositeSide
-          imageSrc={pbTablet}
-          titleType="BEST SALE"
-          prodTitle="IPad Air"
-          prodText="From $599 or $49.91/mo. for 12mo."
-        />
-        {/* <div>
-            <h3>BEST SALE</h3>
-            <h4>IPad Air</h4>
-            <p>From $599 or $49.91/mo. for 12mo.</p>
-          </div> */}
-        {/* </MainContentOppositeSide> */}
+        <MainContentOppositeSide />
+
       </div>
     </div>
   );
