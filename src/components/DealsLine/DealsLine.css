@@ -11,7 +11,15 @@
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
+  padding: 5px 10px;
 }
+
+/* .dealsTitle:hover {
+  background-color: #691E1E;
+  padding: 5px 10px;
+  border-radius: 15px;
+  color: #ffffff;
+} */
 
 .dealsList {
   display: flex;
