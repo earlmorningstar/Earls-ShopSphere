@@ -1,3 +1,4 @@
+import { IoIosHeartEmpty } from "react-icons/io";
 import NewFash from "../../assets/NewFash2.png";
 import "./MainCollection.css";
 
@@ -9,7 +10,9 @@ export default function CollectionProduct() {
       </div>
       <div className="coll-prod-price-star-parent">
         <span>$44.99</span>
-        <span>Icon</span>
+        <span>
+          <IoIosHeartEmpty size={18} />
+        </span>
       </div>
       <div className="coll-prod-info">
         [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing elit.
