@@ -1,5 +1,7 @@
 import "./MainContentCarousel.css";
-import grocery1 from "../../assets/Gro1-fresh-tomatoes.jpg";
+// import grocery1 from "../../assets/Gro1-fresh-tomatoes.jpg";
+import gad10 from "../../assets/Gad10.png";
+import gad1 from "../../assets/Gad1.png";
 
 export default function MainContentOppositeSide() {
   return (
@@ -12,28 +14,26 @@ export default function MainContentOppositeSide() {
         <button>Buy Now</button>
       </div>
 
-      <div className="top-deals-styles top-deals-grid-2">
-        <div className="image-container">
-          <img src={grocery1} alt="gro first img" />
+      <div className="top-deals-flex-container">
+        <div className="top-deals-styles top-deals-grid-2">
+          <div className="image-container">
+            <img src={gad1} alt="gro first img" />
+          </div>
+          <h3>
+            Secure your groceries swiftly today with convenient store pickup
+            options.
+          </h3>
+          <button>Buy Now</button>
         </div>
-        <h3>
-          Secure your groceries swiftly today with convenient store pickup
-          options.
-        </h3>
-        <button>Buy Now</button>
-      </div>
 
-      <div className="top-deals-styles top-deals-grid-3">
-        <div className="image-container">
-          <img src={grocery1} alt="gro first img" />
+        <div className="top-deals-styles top-deals-grid-3">
+          <div className="image-container">
+            <img src={gad10} alt="gro first img" />
+          </div>
+          <h3>Get up to a $200 discount on chosen devices.</h3>
+          <button>Buy Now</button>
         </div>
-        <h3>
-        Get up to a $200 discount on chosen devices.
-        </h3>
-        <button>Buy Now</button>
       </div>
-
-
     </section>
   );
 }
