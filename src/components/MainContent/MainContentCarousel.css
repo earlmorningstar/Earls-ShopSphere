@@ -34,6 +34,7 @@
   flex-direction: column;
   gap: 10px;
   align-items: center;
+  justify-content: space-between;
   text-align: center;
   background-color: #353433;
   color: #ffffff;
