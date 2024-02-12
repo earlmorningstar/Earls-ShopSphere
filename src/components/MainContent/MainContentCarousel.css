@@ -23,7 +23,7 @@
 }
 
 .overallH {
-  margin: 10px;
+  margin: 10px 10px 30px 10px;
   display: flex;
   gap: 5px;
 }
@@ -64,8 +64,8 @@
   gap: 10px;
 }
 
-.top-deals-grid-1 {
-}
+/* .top-deals-grid-1 {
+} */
 
 .top-deals-grid-2 {
   width: 50%;
@@ -92,7 +92,6 @@
 }
 
 .image-container {
-  /* object-fit: contain; */
   width: 100px;
   height: 20vh;
 }

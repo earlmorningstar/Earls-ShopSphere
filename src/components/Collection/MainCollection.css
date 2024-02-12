@@ -1,0 +1,38 @@
+.coll-prod-parent {
+  margin: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 150px;
+  /* background-color: red; */
+}
+
+.coll-prod-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
+  height: 20vh;
+}
+
+.coll-prod-img > img {
+  object-fit: contain;
+  max-width: 100%;
+  max-height: 100%;
+
+}
+
+.coll-prod-price-star-parent {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coll-prod-parent > button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px 6px;
+    width: 80px;
+    border: 0.5 solid white;
+    border-radius: 10px;
+}
