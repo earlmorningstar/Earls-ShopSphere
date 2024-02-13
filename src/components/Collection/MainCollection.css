@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
 .section-heading {
-  
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 700;
+  margin: 3rem 0 2rem 2rem;
 }
 
 .coll-prod-parent {
@@ -39,7 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2px 4px;
+  padding: 4px;
   width: 60px;
   /* border: 0.5 white; */
   border: none;
