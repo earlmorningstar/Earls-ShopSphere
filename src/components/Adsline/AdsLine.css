@@ -3,7 +3,7 @@
 .adsParent {
   display: flex;
   justify-content: space-between;
-  padding: 8px 2rem;
+  padding: 8px 1rem;
   background-color: #232f3e;
   font-family: "Manrope", sans-serif;
 }

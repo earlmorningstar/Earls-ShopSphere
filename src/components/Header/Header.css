@@ -1,21 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap");
 
 .navbar {
-   display: flex;
-   align-items: center;
-    padding: 8px 2rem;
-    justify-content: space-between;
-    border-bottom: 1px solid #232f3e;
+  display: flex;
+  align-items: center;
+  padding: 8px 1rem;
+  justify-content: space-between;
+  border-bottom: 1px solid #232f3e;
 }
 
 .logo-icon {
-    display: flex;
-    gap: 6px;
+  display: flex;
+  gap: 6px;
 }
 
 .logo-icon > span {
-    font-family: 'Tektur', sans-serif;
-    font-size: 23px;
-    font-weight: 500;
-    color: #691E1E;
+  font-family: "Tektur", sans-serif;
+  font-size: 23px;
+  font-weight: 500;
+  color: #691e1e;
 }

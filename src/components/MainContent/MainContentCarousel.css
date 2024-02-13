@@ -2,20 +2,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .carouselParent {
+  /* position: relative; */
   width: 50%;
   height: 70vh;
-  margin: 0 22px;
+  margin: 0 1.5rem;
 }
 
 .slideImagesParent {
-  border: 0.5px solid white;
-  border-radius: 8px;
+  border: 0.5px solid none;
   height: 85vh;
   width: 100%;
 }
 
-.slideImges {
-  border: 0.5px solid white;
+.slideImagesParent > img {
+  object-fit: cover;
+  border: 0.5px solid none;
   border-radius: 8px;
   display: block;
   width: 100%;
@@ -40,7 +41,7 @@
   color: #ffffff;
   padding: 18px 10px;
   border: none;
-  border-radius: 8px;
+  border-radius: 4px;
 }
 
 .top-deals-styles > h3 {

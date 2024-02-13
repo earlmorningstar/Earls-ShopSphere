@@ -17,7 +17,7 @@ export default function DealsLine() {
       <ShopSphereBargains />
       <StyleBargains />
       <GadgetBargains />
-      <Grocery />
+      {/* <Grocery /> */}
       {/* <PresentSuggestions /> */}
     </div>
   );

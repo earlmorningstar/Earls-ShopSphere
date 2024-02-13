@@ -4,6 +4,7 @@ import "./MainCollection.css";
 
 export default function CollectionProduct() {
   return (
+    <>
     <div className="coll-prod-parent">
       <div className="coll-prod-img">
         <img src={NewFash} alt="" />
@@ -20,5 +21,7 @@ export default function CollectionProduct() {
       </div>
       <button>+ Add</button>
     </div>
+    </>
+    
   );
 }
