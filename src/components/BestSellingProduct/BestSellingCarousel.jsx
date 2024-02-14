@@ -1,6 +1,7 @@
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import Slider from "react-slick";
+import { GoPlus } from "react-icons/go";
 import Gad12 from "../../assets/Gad12.PNG";
 import Gad8 from "../../assets/Gad8.PNG";
 import PbHeadPhone from "../../assets/PBheadphones.PNG";
@@ -63,7 +64,13 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -81,7 +88,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -99,7 +111,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -117,79 +134,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
-          </div>
-        </div>
-
-        <div className="bestSelling-holdingDiv">
-          <div className="bestSelling-ImageParent">
-            <img src={Style4} alt="bs-img" />
-          </div>
-          <div className="bestSelling-info-rating-price">
-            <h4>
-              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Porro, error! Minus itaque
-            </h4>
-            <div>
-              <Stack spacing={1}>
-                <Rating name="rating" defaultValue={0} precision={1} />
-              </Stack>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
             </div>
-            <span>$200</span>
-          </div>
-        </div>
-
-        <div className="bestSelling-holdingDiv">
-          <div className="bestSelling-ImageParent">
-            <img src={Style6} alt="bs-img" />
-          </div>
-          <div className="bestSelling-info-rating-price">
-            <h4>
-              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Porro, error! Minus itaque
-            </h4>
-            <div>
-              <Stack spacing={1}>
-                <Rating name="rating" defaultValue={0} precision={1} />
-              </Stack>
-            </div>
-            <span>$200</span>
-          </div>
-        </div>
-
-        <div className="bestSelling-holdingDiv">
-          <div className="bestSelling-ImageParent">
-            <img src={Style7} alt="bs-img" />
-          </div>
-          <div className="bestSelling-info-rating-price">
-            <h4>
-              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Porro, error! Minus itaque
-            </h4>
-            <div>
-              <Stack spacing={1}>
-                <Rating name="rating" defaultValue={0} precision={1} />
-              </Stack>
-            </div>
-            <span>$200</span>
-          </div>
-        </div>
-
-        <div className="bestSelling-holdingDiv">
-          <div className="bestSelling-ImageParent">
-            <img src={Style3} alt="bs-img" />
-          </div>
-          <div className="bestSelling-info-rating-price">
-            <h4>
-              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
-              elit. Porro, error! Minus itaque
-            </h4>
-            <div>
-              <Stack spacing={1}>
-                <Rating name="rating" defaultValue={0} precision={1} />
-              </Stack>
-            </div>
-            <span>$200</span>
           </div>
         </div>
 
@@ -207,7 +157,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -225,7 +180,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -243,7 +203,12 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
 
@@ -261,7 +226,104 @@ export default function BestSellingCarousel() {
                 <Rating name="rating" defaultValue={0} precision={1} />
               </Stack>
             </div>
-            <span>$200</span>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="bestSelling-holdingDiv">
+          <div className="bestSelling-ImageParent">
+            <img src={Gad12} alt="bs-img" />
+          </div>
+          <div className="bestSelling-info-rating-price">
+            <h4>
+              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Porro, error! Minus itaque
+            </h4>
+            <div>
+              <Stack spacing={1}>
+                <Rating name="rating" defaultValue={0} precision={1} />
+              </Stack>
+            </div>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="bestSelling-holdingDiv">
+          <div className="bestSelling-ImageParent">
+            <img src={Gad12} alt="bs-img" />
+          </div>
+          <div className="bestSelling-info-rating-price">
+            <h4>
+              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Porro, error! Minus itaque
+            </h4>
+            <div>
+              <Stack spacing={1}>
+                <Rating name="rating" defaultValue={0} precision={1} />
+              </Stack>
+            </div>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="bestSelling-holdingDiv">
+          <div className="bestSelling-ImageParent">
+            <img src={Gad12} alt="bs-img" />
+          </div>
+          <div className="bestSelling-info-rating-price">
+            <h4>
+              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Porro, error! Minus itaque
+            </h4>
+            <div>
+              <Stack spacing={1}>
+                <Rating name="rating" defaultValue={0} precision={1} />
+              </Stack>
+            </div>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div className="bestSelling-holdingDiv">
+          <div className="bestSelling-ImageParent">
+            <img src={Gad12} alt="bs-img" />
+          </div>
+          <div className="bestSelling-info-rating-price">
+            <h4>
+              [Product Info] Lorem ipsum dolor sit amet, consectetur adipisicing
+              elit. Porro, error! Minus itaque
+            </h4>
+            <div>
+              <Stack spacing={1}>
+                <Rating name="rating" defaultValue={0} precision={1} />
+              </Stack>
+            </div>
+            <div className="bs-span-btn">
+              <span>$200</span>
+              <button>
+                <GoPlus size={15} color="#ffffff" /> Add
+              </button>
+            </div>
           </div>
         </div>
       </Slider>
