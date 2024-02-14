@@ -65,8 +65,9 @@
   gap: 10px;
 }
 
-/* .top-deals-grid-1 {
-} */
+.top-deals-grid-1 {
+  padding: 30px 0;
+}
 
 .top-deals-grid-2 {
   width: 50%;

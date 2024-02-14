@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+
+.pros-holder {
+  margin: 2rem;
+  display: flex;
+  gap: 20px;
+  border: 0.5px solid #353433;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.each-pros {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.pros-info {
+  font-family: "Manrope", sans-serif;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pros-info > h3 {
+  font-size: 15px;
+}
+
+.pros-info > span {
+  font-size: 13px;
+}

@@ -4,6 +4,8 @@ import Header from "./components/Header/Header.jsx";
 import MainContentCarousel from "./components/MainContent/MainContentCarousel.jsx";
 import MainCollection from "./components/Collection/MainCollection.jsx";
 import BestSellingProd from "./components/BestSellingProduct/BestSellingProd.jsx";
+import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx";
+
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
       <MainContentCarousel />
       <MainCollection />
       <BestSellingProd />
+      <MainCollection />
+      <ProsOfShopping />
     </>
   );
 }

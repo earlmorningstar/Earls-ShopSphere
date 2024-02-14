@@ -20,7 +20,7 @@ export default function MainContentOppositeSide() {
             <img src={gad1} alt="gro first img" />
           </div>
           <h3>
-            Secure your groceries swiftly today with convenient store pickup
+            Secure your devices swiftly today with convenient store pickup
             options.
           </h3>
           <button>Buy Now</button>
