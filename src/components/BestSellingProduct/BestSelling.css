@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+.best-selling-section-header {
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-weight: 700;
+  margin: 3rem 0 2rem 2rem;
+  /* overflow-x: hidden; */
+}
+
+.bestSelling-holdingDiv {
+  font-family: "Roboto Condensed", sans-serif;
+  display: flex;
+  flex-direction: column;
+}
+
+.bestSelling-info-rating-price {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.bestSelling-info-rating-price > h4 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.bestSelling-info-rating-price > span {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.best-selling-slider-container {
+  margin: 0 2rem;
+}
+
+.bestSelling-ImageParent {
+  margin: 0 auto;
+  width: 100px;
+  height: 35vh;
+}
+
+.bestSelling-ImageParent > img {
+  object-fit: contain;
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+}
