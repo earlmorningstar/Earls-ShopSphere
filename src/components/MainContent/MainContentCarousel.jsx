@@ -8,7 +8,7 @@ import thirdSlide from "../../assets/Style8.jpg";
 import fourthSlide from "../../assets/Style10.jpg";
 import fifthSlide from "../../assets/Style11.jpg";
 import sixSlide from "../../assets/Style12.jpg";
-import pbTablet from "../../assets/PBtablet.jpg";
+// import pbTablet from "../../assets/PBtablet.jpg";
 
 // import { NextArrow, PrevArrow } from "./Arrow";
 
