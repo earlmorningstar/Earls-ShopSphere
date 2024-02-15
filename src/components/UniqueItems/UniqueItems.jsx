@@ -3,12 +3,9 @@ import "./UniqueItems.css";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
-import Gad6 from "../../assets/Gad6.png";
-import PBiPhone from "../../assets/PBiPhone.png";
-import NewFash1 from "../../assets/NewFash1.png";
-import NewFash3 from "../../assets/NewFash3.png";
 
-export default function UniqueItems() {
+
+export default function UniqueItems({showImages, showAlt}) {
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -56,7 +53,7 @@ export default function UniqueItems() {
   return (
     <div className="uniqueItem-parent">
       <div className="unique-img-holder">
-        <img src={Gad6} alt="gadget 6" />
+        <img src={showImages} alt={showAlt} />
       </div>
 
       <div className="unique-infos">

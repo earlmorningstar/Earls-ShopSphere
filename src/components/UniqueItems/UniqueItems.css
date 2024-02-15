@@ -8,15 +8,21 @@
   font-weight: 700;
   margin: 3rem 0 2rem 1rem;
 }
+.unique-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-row-gap: 20px;
+}
+
 .uniqueItem-parent {
-  background-color: rgb(238, 236, 236);
+  background-color: rgb(209, 207, 207);
   padding: 12px;
   border-radius: 8px;
   display: flex;
   align-items: center;
-  gap: 30px;
-  width: 450px;
-  margin: 0 0 1rem 1rem;
+  gap: 20px;
+  width: 350px;
+  margin: 0 0 0 1rem;
 }
 
 .unique-img-holder {
@@ -67,7 +73,8 @@
 .uniqueCountdown {
   font-family: "Quicksand", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 12px;
   display: flex;
   gap: 10px;
 }
