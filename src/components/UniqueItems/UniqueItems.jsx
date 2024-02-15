@@ -43,7 +43,7 @@ export default function UniqueItems({showImages, showAlt}) {
   }, []);
 
   function generateRandNumb() {
-    return Math.floor(Math.random() * (570 - 500 + 1)) + 500;
+    return Math.floor(Math.random() * (1000 - 400 + 1)) + 400;
   }
 
   function generateRandAmount() {
@@ -58,7 +58,7 @@ export default function UniqueItems({showImages, showAlt}) {
 
       <div className="unique-infos">
         <h3>Product Title</h3>
-        <h4>Product you'd love [Prod. Information]</h4>
+        <h4>Products you'd love. [Prod. Information]</h4>
         <div>
           <Stack spacing={1}>
             <Rating name="rating" defaultValue={0} precision={1} />
@@ -71,7 +71,7 @@ export default function UniqueItems({showImages, showAlt}) {
           <p>Mins: {countdown.minutes}</p>
           <p>Secs: {countdown.seconds}</p>
         </div>
-        <h4>Total Item Purchase: {randNumb} </h4>
+        <h5>Total Item Purchase:<i> {randNumb}</i> </h5>
         <button>
           <GoPlus />
           Add to Cart

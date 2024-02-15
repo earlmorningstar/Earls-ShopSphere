@@ -56,6 +56,13 @@
   font-weight: 500;
 }
 
+.unique-infos > h5 {
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+
+}
+
 .unique-infos > button {
   cursor: pointer;
   display: flex;

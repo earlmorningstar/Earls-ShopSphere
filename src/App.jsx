@@ -6,7 +6,7 @@ import MainCollection from "./components/Collection/MainCollection.jsx";
 import BestSellingProd from "./components/BestSellingProduct/BestSellingProd.jsx";
 import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx";
 import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
-
+import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx"
 
 function App() {
   return (
@@ -18,8 +18,9 @@ function App() {
       <MainCollection />
       <BestSellingProd />
       <MainCollection />
-      <ProsOfShopping />
       <UniqueItemsHolder />
+      <ProsOfShopping />
+      <MainShopByDepartment />
     </>
   );
 }
