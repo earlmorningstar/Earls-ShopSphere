@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+.sbd-section-header {
+  font-family: "Ubuntu Condensed", sans-serif;
+  text-align: center;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 3rem 0 2rem 1rem;
+}
+
+.sbd-parent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 8px;
+  grid-row-gap: 10px;
+  margin: 0 0 1rem 1rem;
+}
+
+.sbd-direct-divChild {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 8px;
+  gap: 10px;
+}
+
+.sbd-direct-divChild:hover > span {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  text-decoration-thickness: 2px;
+}
+
+/* .sbd-direct-divChild:hover {
+    border: 2px solid black;
+} */
+
+.sbd-direct-divChild > span {
+  font-family: "Manrope", sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.sbd-direct-divChild > ul {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  list-style-type: none;
+  font-family: "Work Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-size: 15px;
+}
