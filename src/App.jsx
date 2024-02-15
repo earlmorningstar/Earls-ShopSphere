@@ -5,7 +5,7 @@ import MainContentCarousel from "./components/MainContent/MainContentCarousel.js
 import MainCollection from "./components/Collection/MainCollection.jsx";
 import BestSellingProd from "./components/BestSellingProduct/BestSellingProd.jsx";
 import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx";
-import UniqueItems from "./components/UniqueItems/UniqueItems.jsx";
+import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
 
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
       <BestSellingProd />
       <MainCollection />
       <ProsOfShopping />
-      <UniqueItems />
+      <UniqueItemsHolder />
     </>
   );
 }

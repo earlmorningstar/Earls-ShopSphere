@@ -2,14 +2,19 @@ import { useState, useEffect } from "react";
 import "./UniqueItems.css";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
+import { GoPlus } from "react-icons/go";
 import Gad6 from "../../assets/Gad6.png";
 import PBiPhone from "../../assets/PBiPhone.png";
 import NewFash1 from "../../assets/NewFash1.png";
 import NewFash3 from "../../assets/NewFash3.png";
 
 export default function UniqueItems() {
-
-  const [countdown, setCountdown] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
+  const [countdown, setCountdown] = useState({
+    days: 0,
+    hours: 0,
+    minutes: 0,
+    seconds: 0,
+  });
   const [randNumb, setRandNumb] = useState(0);
   const [randAmount, setRandAmount] = useState(0);
 
@@ -20,12 +25,14 @@ export default function UniqueItems() {
     const newRandAmount = generateRandAmount();
     setRandAmount(newRandAmount);
 
-    const targetDate = new Date('2024-12-31T00:00:00').getTime();
+    const targetDate = new Date("2024-12-31T00:00:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
       const distance = targetDate - now;
       const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const hours = Math.floor(
+        (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+      );
       const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       const seconds = Math.floor((distance % (1000 * 60)) / 1000);
       setCountdown({ days, hours, minutes, seconds });
@@ -34,7 +41,6 @@ export default function UniqueItems() {
         setCountdown({ days: 0, hours: 0, minutes: 0, seconds: 0 });
       }
     }, 1000);
-
 
     return () => clearInterval(interval);
   }, []);
@@ -54,17 +60,25 @@ export default function UniqueItems() {
       </div>
 
       <div className="unique-infos">
-        <h3></h3>
+        <h3>Product Title</h3>
         <h4>Product you'd love [Prod. Information]</h4>
         <div>
           <Stack spacing={1}>
             <Rating name="rating" defaultValue={0} precision={1} />
           </Stack>
         </div>
-        <h5>${randAmount}</h5>
-        <div>Days remaining: <p>D{countdown.days}</p><p>H{countdown.hours}</p><p>M{countdown.minutes}</p><p>S{countdown.seconds}</p></div>
-        <h5>Total Purchase: {randNumb} </h5>
-        <button>Add to Cart</button>
+        <h4>${randAmount}</h4>
+        <div className="uniqueCountdown">
+          <p>Days: {countdown.days}</p>
+          <p>Hours: {countdown.hours}</p>
+          <p>Mins: {countdown.minutes}</p>
+          <p>Secs: {countdown.seconds}</p>
+        </div>
+        <h4>Total Item Purchase: {randNumb} </h4>
+        <button>
+          <GoPlus />
+          Add to Cart
+        </button>
       </div>
     </div>
   );
