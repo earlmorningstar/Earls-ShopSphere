@@ -23,7 +23,7 @@ export default function ProsOfShopping() {
           <IoGiftOutline size={30} />
         </div>
         <div className="pros-info">
-          <h3>Daily Surprice Deals</h3>
+          <h3>Daily Deals</h3>
           <span>Enjoy savings of up to 25% off</span>
         </div>
       </div>

@@ -4,7 +4,7 @@
 .section-heading {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 700;
-  margin: 3rem 0 2rem 2rem;
+  margin: 3rem 0 2rem 1rem;
 }
 
 .coll-prod-parent {
@@ -13,7 +13,7 @@
   border-radius: 3px;
   font-family: "Roboto Condensed", sans-serif;
   /* margin: 0 2rem; */
-  margin-left: 2rem;
+  margin-left: 1rem;
   display: flex;
   flex-direction: column;
   gap: 10px;

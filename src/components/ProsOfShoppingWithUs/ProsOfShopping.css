@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap");
 
 .pros-holder {
-  margin: 2rem;
+  margin: 2rem 1rem;
   display: flex;
   gap: 20px;
   border: 1px solid #353433;
