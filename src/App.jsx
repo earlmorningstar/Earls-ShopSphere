@@ -7,6 +7,7 @@ import BestSellingProd from "./components/BestSellingProduct/BestSellingProd.jsx
 import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx";
 import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
 import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx";
+import FooterHolder from "./components/Footer/FooterHolder.jsx";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
       <UniqueItemsHolder />
       <MainShopByDepartment />
       <ProsOfShopping />
+      <FooterHolder />
     </>
   );
 }
