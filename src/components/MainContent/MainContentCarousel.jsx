@@ -49,7 +49,6 @@ export default function MainContentCarousel() {
 
       <div>
         <MainContentOppositeSide />
-
       </div>
     </div>
   );
