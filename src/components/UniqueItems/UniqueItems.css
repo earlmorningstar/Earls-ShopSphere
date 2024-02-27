@@ -60,7 +60,6 @@
   font-family: "Roboto Condensed", sans-serif;
   font-size: 14px;
   font-weight: 500;
-
 }
 
 .unique-infos > button {
@@ -84,4 +83,31 @@
   font-size: 12px;
   display: flex;
   gap: 10px;
+}
+
+@media screen and (max-width: 1130px) {
+  .unique-grid {
+    grid-template-columns: repeat(3, 33%);
+    margin: 0 1rem 0 0;
+  }
+}
+
+@media screen and (max-width: 1098px) {
+  .unique-grid {
+    grid-template-columns: repeat(2, 40%);
+    justify-content: center;
+    grid-row-gap: 20px;
+  }
+}
+
+@media screen and (max-width: 920px) {
+  .unique-grid {
+    grid-template-columns: repeat(1, 80%);
+    justify-items: center;
+  }
+
+  .uniqueItem-parent {
+    padding: 20px;
+    width: 650px;
+  }
 }

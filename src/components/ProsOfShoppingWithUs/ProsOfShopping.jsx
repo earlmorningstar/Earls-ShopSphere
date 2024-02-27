@@ -3,6 +3,7 @@ import { IoGiftOutline } from "react-icons/io5";
 import { BiSupport } from "react-icons/bi";
 import { PiPercent } from "react-icons/pi";
 import { RiSecurePaymentLine } from "react-icons/ri";
+import { GrSelect } from "react-icons/gr";
 import "./ProsOfShopping.css";
 
 export default function ProsOfShopping() {
@@ -50,6 +51,16 @@ export default function ProsOfShopping() {
 
       <div className="each-pros">
         <div>
+          <GrSelect size={30} />
+        </div>
+        <div className="pros-info">
+          <h3>Pick products</h3>
+          <span>Unmatched variety</span>
+        </div>
+      </div>
+
+      <div className="each-pros">
+        <div>
           <RiSecurePaymentLine size={30} />
         </div>
         <div className="pros-info">
@@ -57,6 +68,7 @@ export default function ProsOfShopping() {
           <span>Fully safeguarded transactions</span>
         </div>
       </div>
+
     </div>
   );
 }

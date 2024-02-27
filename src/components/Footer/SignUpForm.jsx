@@ -12,7 +12,6 @@ export default function SignUpForm() {
     setEmail("");
   };
   return (
-    <>
       <div className="signUp-style">
         <input
           type="email"
@@ -22,6 +21,5 @@ export default function SignUpForm() {
         />
         <button onClick={handleSignup}>Sign Up</button>
       </div>
-    </>
   );
 }

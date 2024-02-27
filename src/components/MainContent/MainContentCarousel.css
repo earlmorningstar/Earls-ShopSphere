@@ -121,15 +121,32 @@
   right: 10px; 
 } */
 
+@media screen and (max-width: 1200px) {
+  .image-container {
+    height: 14vh;
+  }
+  .top-deals-styles {
+    padding: 18px 10px;
+  }
+}
 
 @media screen and (max-width: 1145px) {
   .image-container {
     height: 11vh;
   }
+  .top-deals-styles {
+    padding: 12px 10px;
+  }
+}
 
-  /* .top-deals-grid-1 {
-    display: none;
-  } */
+@media screen and (max-width: 1115px) {
+  .top-deals-styles {
+    padding: 8px 10px;
+  }
+  .image-container {
+    height: 8vh;
+  }
+  
 }
 
 @media screen and (max-width: 1025px) {
