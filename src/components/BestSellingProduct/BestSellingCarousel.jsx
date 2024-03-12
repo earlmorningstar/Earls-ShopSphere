@@ -6,10 +6,6 @@ import Gad12 from "../../assets/Gad12.PNG";
 import Gad8 from "../../assets/Gad8.PNG";
 import PbHeadPhone from "../../assets/PBheadphones.PNG";
 import PbGaming from "../../assets/PBpcgaming.PNG";
-// import Style4 from "../../assets/Style4.jpg";
-// import Style6 from "../../assets/Style6.jpg";
-// import Style7 from "../../assets/Style7.jpg";
-// import Style3 from "../../assets/Style3.jpg";
 
 export default function BestSellingCarousel() {
   const bestSellingCarouselSettings = {

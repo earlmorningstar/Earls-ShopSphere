@@ -8,10 +8,11 @@ import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx
 import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
 import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx";
 import FooterHolder from "./components/Footer/FooterHolder.jsx";
+import { CartContextProvider } from "./store/CartContext.jsx";
 
 function App() {
   return (
-    <>
+    <CartContextProvider>
       <AdsLine />
       <Header />
       <DealsLine />
@@ -23,7 +24,7 @@ function App() {
       <MainShopByDepartment />
       <ProsOfShopping />
       <FooterHolder />
-    </>
+    </CartContextProvider>
   );
 }
 

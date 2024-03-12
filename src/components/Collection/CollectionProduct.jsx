@@ -2,6 +2,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 import { GoPlus } from "react-icons/go";
 import NewFash from "../../assets/NewFash2.png";
 import "./MainCollection.css";
+import { currrencyFormatter } from "../../Util/formatter.js";
 
 export default function CollectionProduct() {
   return (
@@ -11,7 +12,7 @@ export default function CollectionProduct() {
           <img src={NewFash} alt="" />
         </div>
         <div className="coll-prod-price-star-parent">
-          <span>$44.99</span>
+          <span>{currrencyFormatter.format(44.99)}</span>
           <span>
             <IoIosHeartEmpty size={18} />
           </span>
