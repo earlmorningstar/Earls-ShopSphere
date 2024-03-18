@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
+
 .section-heading {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 700;
@@ -63,21 +64,21 @@
   grid-row-gap: 10px;
 }
 
-@media screen and (max-width: 1024px){
+@media screen and (max-width: 1024px) {
   .coll-Prod-flex {
     grid-template-columns: repeat(4, 1fr);
     justify-items: center;
   }
 }
 
-@media screen and (max-width: 800px){
+@media screen and (max-width: 800px) {
   .coll-Prod-flex {
     grid-template-columns: repeat(3, 1fr);
     justify-items: center;
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .coll-Prod-flex {
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;

@@ -18,6 +18,7 @@
 }
 
 .shoppintCartParent {
+  cursor: pointer;
   font-family: "Domine", serif;
   font-optical-sizing: auto;
   font-weight: 700;

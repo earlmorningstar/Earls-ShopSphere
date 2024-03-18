@@ -9,22 +9,27 @@ import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
 import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx";
 import FooterHolder from "./components/Footer/FooterHolder.jsx";
 import { CartContextProvider } from "./store/CartContext.jsx";
+import {UserProgressContextProvider} from "./store/UserProgressContext.jsx";
+import Cart from "./components/Cart/Cart.jsx";
 
 function App() {
   return (
-    <CartContextProvider>
-      <AdsLine />
-      <Header />
-      <DealsLine />
-      <MainContentCarousel />
-      <MainCollection />
-      <BestSellingProd />
-      <MainCollection />
-      <UniqueItemsHolder />
-      <MainShopByDepartment />
-      <ProsOfShopping />
-      <FooterHolder />
-    </CartContextProvider>
+    <UserProgressContextProvider>
+      <CartContextProvider>
+        <AdsLine />
+        <Header />
+        <DealsLine />
+        <MainContentCarousel />
+        <MainCollection />
+        <BestSellingProd />
+        <MainCollection />
+        <Cart />
+        <UniqueItemsHolder />
+        <MainShopByDepartment />
+        <ProsOfShopping />
+        <FooterHolder />
+      </CartContextProvider>
+    </UserProgressContextProvider>
   );
 }
 
