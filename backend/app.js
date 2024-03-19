@@ -22,6 +22,15 @@ app.get('/fits', async (req, res) => {
   res.json(JSON.parse(fits));
 });
 
+// ---------------- Gadgets-------------
+
+app.get('/gadgets', async (req, res) => {
+    const gadgets = await fs.readFile('./data/available-gadget.json', 'utf8');
+    res.json(JSON.parse(gadgets));
+  });
+
+//  ---------------- Gadgets-------------
+
 app.post('/orders', async (req, res) => {
   const orderData = req.body.order;
 

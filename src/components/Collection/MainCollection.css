@@ -22,15 +22,21 @@
 }
 
 .coll-prod-img {
+  /* border-radius: 10px; */
   margin: 0 auto;
-  width: 100px;
-  height: 20vh;
+  object-fit: cover;
+  width: 130px;
+  height: 130px;
+  display: flex;
+  align-items: center;
+
 }
 
 .coll-prod-img > img {
   object-fit: contain;
   max-width: 100%;
   max-height: 100%;
+  border-radius: 7px;
 }
 
 .coll-prod-price-star-parent {
