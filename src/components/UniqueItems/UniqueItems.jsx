@@ -1,11 +1,18 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
+import { currrencyFormatter } from "../../Util/formatter.js";
+import CartContext from "../../store/CartContext";
 import "./UniqueItems.css";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
 
+export default function UniqueItems({ uniqueItem }) {
+  const cartCtx = useContext(CartContext);
 
-export default function UniqueItems({showImages, showAlt}) {
+  function handleAddItemToCart() {
+    cartCtx.addItem(uniqueItem);
+  }
+
   const [countdown, setCountdown] = useState({
     days: 0,
     hours: 0,
@@ -13,14 +20,14 @@ export default function UniqueItems({showImages, showAlt}) {
     seconds: 0,
   });
   const [randNumb, setRandNumb] = useState(0);
-  const [randAmount, setRandAmount] = useState(0);
+  // const [randAmount, setRandAmount] = useState(0);
 
   useEffect(() => {
     const newRandNumb = generateRandNumb();
     setRandNumb(newRandNumb);
 
-    const newRandAmount = generateRandAmount();
-    setRandAmount(newRandAmount);
+    // const newRandAmount = generateRandAmount();
+    // setRandAmount(newRandAmount);
 
     const targetDate = new Date("2024-12-31T00:00:00").getTime();
     const interval = setInterval(() => {
@@ -46,33 +53,38 @@ export default function UniqueItems({showImages, showAlt}) {
     return Math.floor(Math.random() * (1000 - 400 + 1)) + 400;
   }
 
-  function generateRandAmount() {
-    return Math.floor(Math.random() * (150 - 450 + 1)) + 450;
-  }
+  // function generateRandAmount() {
+  //   return Math.floor(Math.random() * (150 - 450 + 1)) + 450;
+  // }
 
   return (
     <div className="uniqueItem-parent">
       <div className="unique-img-holder">
-        <img src={showImages} alt={showAlt} />
+        <img
+          src={`http://localhost:3001/${uniqueItem.image}`}
+          alt={uniqueItem.item_name}
+        />
       </div>
 
       <div className="unique-infos">
-        <h3>Product Title</h3>
-        <h4>Products you'd love. [Prod. Information]</h4>
+        <h3>{uniqueItem.item_name}</h3>
+        <h4>{uniqueItem.description}</h4>
         <div>
           <Stack spacing={1}>
             <Rating name="rating" defaultValue={0} precision={1} />
           </Stack>
         </div>
-        <h4>${randAmount}</h4>
+        <h4>{currrencyFormatter.format(uniqueItem.price)}</h4>
         <div className="uniqueCountdown">
           <p>Days: {countdown.days}</p>
           <p>Hours: {countdown.hours}</p>
           <p>Mins: {countdown.minutes}</p>
           <p>Secs: {countdown.seconds}</p>
         </div>
-        <h5>Total Item Purchase:<i> {randNumb}</i> </h5>
-        <button>
+        <h5>
+          Total Item Purchase:<i> {randNumb}</i>
+        </h5>
+        <button onClick={handleAddItemToCart}>
           <GoPlus />
           Add to Cart
         </button>

@@ -20,15 +20,14 @@ export default function CollectionProduct({ fit }) {
           <img src={`http://localhost:3001/${fit.image}`} alt={fit.item_name} />
         </div>
         <div className="coll-prod-price-star-parent">
-          <span className="fit-price">
-            {currrencyFormatter.format(fit.price)}
-          </span>
+          <span>{currrencyFormatter.format(fit.price)}</span>
           <span>
             <IoIosHeartEmpty size={18} />
           </span>
         </div>
         <div className="coll-prod-info">
-          {fit.item_name}: {fit.description}
+          <h4>{fit.item_name}</h4>
+          <span>{fit.description}</span>
         </div>
         <button onClick={handleAddItemToCart}>
           <GoPlus size={15} color="#ffffff" /> Add

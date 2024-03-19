@@ -21,17 +21,18 @@
 }
 
 .bestSelling-info-rating-price > h4 {
-  font-size: 14px;
-  font-weight: 400;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 .bs-span-btn {
   display: flex;
+  align-items: center;
   gap: 20px;
 }
 
 .bs-span-btn > span {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
 }
 

@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap");
 
-
 .section-heading {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 700;
@@ -9,14 +8,14 @@
 }
 
 .coll-prod-parent {
-  /* border: 1px solid #353433; */
+  font-family: "Roboto Condensed", sans-serif;
+  background-color: #ecebeb;
   padding: 8px;
   border-radius: 3px;
-  font-family: "Roboto Condensed", sans-serif;
-  /* margin: 0 2rem; */
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 10px;
   width: 150px;
 }
@@ -24,16 +23,16 @@
 .coll-prod-img {
   /* border-radius: 10px; */
   margin: 0 auto;
-  object-fit: cover;
+  /* object-fit: cover; */
   width: 130px;
   height: 130px;
   display: flex;
-  align-items: center;
-
+  align-items: start;
+  justify-content: start;
 }
 
 .coll-prod-img > img {
-  object-fit: contain;
+  /* object-fit: contain; */
   max-width: 100%;
   max-height: 100%;
   border-radius: 7px;
@@ -43,6 +42,7 @@
   display: flex;
   justify-content: space-between;
   font-weight: 500;
+  font-size: 14px;
 }
 
 .coll-prod-parent > button {
@@ -60,8 +60,18 @@
 }
 
 .coll-prod-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.coll-prod-info > h4 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
+}
+
+.coll-prod-info > span {
+  font-size: 13px;
 }
 
 .coll-Prod-flex {
