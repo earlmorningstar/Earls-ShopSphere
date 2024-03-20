@@ -11,6 +11,7 @@ import FooterHolder from "./components/Footer/FooterHolder.jsx";
 import { CartContextProvider } from "./store/CartContext.jsx";
 import {UserProgressContextProvider} from "./store/UserProgressContext.jsx";
 import Cart from "./components/Cart/Cart.jsx";
+import Checkout from "./components/Checkout.jsx";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <BestSellingProd />
         <MainCollection />
         <Cart />
+        <Checkout />
         <UniqueItemsHolder />
         <MainShopByDepartment />
         <ProsOfShopping />
