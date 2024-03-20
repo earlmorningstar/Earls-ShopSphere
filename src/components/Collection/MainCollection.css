@@ -9,9 +9,10 @@
 
 .coll-prod-parent {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: #ecebeb;
+  /* background-color: #ecebeb; */
   padding: 8px;
   border-radius: 3px;
+  border: 1px solid #9c9c9a;
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
