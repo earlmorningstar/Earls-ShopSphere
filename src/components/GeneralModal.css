@@ -1,0 +1,20 @@
+.checkout {
+  font-family: "Lato", sans-serif;
+  font-optical-sizing: auto;
+  /* display: none; */
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+  width: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #353433;
+  border-radius: 8px;
+  box-shadow: 0 0 10px #353433;
+}
+
+
+.successNote {
+    top: 50%;
+  left: 50%;
+}

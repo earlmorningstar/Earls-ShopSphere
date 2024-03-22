@@ -1,24 +1,39 @@
-import { useEffect, useState } from "react";
+import useHttp from "../../../hooks/useHttp.js";
+import Error from "../Error.jsx";
 import CollectionProduct from "./CollectionProduct.jsx";
 import "./MainCollection.css";
 
+const requestConfig = {};
+
 export default function MainCollection() {
-  const [loadedFits, setLoadedFits] = useState([]);
+  const {
+    data: loadedFits,
+    isLoading,
+    error,
+  } = useHttp("http://localhost:3001/fits", requestConfig, []);
 
-  useEffect(() => {
-    async function fetchFits() {
-      const response = await fetch("http://localhost:3001/fits");
+  if (isLoading) {
+    return <p>Fetching Items...</p>;
+  }
 
-      if (response.ok) {
-        //....
-      }
+  if (error) {
+    return <Error title="Failed to fetch items" message={error} />;
+  }
 
-      const fits = await response.json();
-      setLoadedFits(fits);
-    }
+  // useEffect(() => {
+  //   async function fetchFits() {
+  //     const response = await fetch("http://localhost:3001/fits");
 
-    fetchFits();
-  }, []);
+  //     if (response.ok) {
+  //       //....
+  //     }
+
+  //     const fits = await response.json();
+  //     setLoadedFits(fits);
+  //   }
+
+  //   fetchFits();
+  // }, []);
 
   return (
     <>

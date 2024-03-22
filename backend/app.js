@@ -16,10 +16,14 @@ app.use((req, res, next) => {
   next();
 });
 
+// ---------------- Fashion-------------
+
 app.get("/fits", async (req, res) => {
   const fits = await fs.readFile("./data/available-fashion.json", "utf8");
   res.json(JSON.parse(fits));
 });
+
+// ---------------- Fashion-------------
 
 // ---------------- Gadgets-------------
 app.get("/gadgets", async (req, res) => {
