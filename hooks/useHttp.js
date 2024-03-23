@@ -2,7 +2,7 @@ import { useState, useCallback, useEffect } from "react";
 
 async function sendHttpRequest(url, config) {
   const response = await fetch(url, config);
-  
+
   const resData = await response.json();
 
   if (!response.ok) {
@@ -30,7 +30,7 @@ export default function useHttp(url, config, initialData) {
         const resData = await sendHttpRequest(url, { ...config, body: data });
         setData(resData);
       } catch (error) {
-        setError(error.message || "Someething went wrong");
+        setError(error.message || "Something went wrong");
       }
       setIsLoading(false);
     },
