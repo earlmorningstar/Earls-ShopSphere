@@ -21,12 +21,12 @@ export default function DealsLine() {
 
       {openDropDownOption && <DropDownOption />}
       <PrimeBargains />
-      {/* <DailyBargains /> */}
+      <DailyBargains />
       <ShopSphereBargains />
       <StyleBargains />
       <GadgetBargains />
-      {/* <Grocery /> */}
-      {/* <PresentSuggestions /> */}
+      <Grocery />
+      <PresentSuggestions />
     </div>
   );
 }

@@ -16,7 +16,7 @@ export default function ShoppingCart() {
     userProgressCtx.showCart();
   }
   return (
-    <div onClick={handleShowCart} className="shoppintCartParent">
+    <div onClick={handleShowCart} className="shoppingCartParent">
       <PiShoppingCart size={25} color="red" />
       <span>({totalCartItems})</span>
     </div>

@@ -61,10 +61,10 @@ export default function Checkout() {
 
   let buttonActions = (
     <>
-      <button type="button" onClick={handleCloseCheckout}>
+      <button className="order-btn" type="button" onClick={handleCloseCheckout}>
         Close
       </button>
-      <button>Submit Order</button>
+      <button className="order-btn">Submit Order</button>
     </>
   );
 
@@ -77,7 +77,7 @@ export default function Checkout() {
       <Modal
         open={userProgressCtx.progress === "checkout"}
         onClose={handleFinish}
-        className="successNote"
+        className="checkout"
       >
         <h2>Success!</h2>
         <p>Your order was submitted successfully.</p>
@@ -98,7 +98,7 @@ export default function Checkout() {
       onClose={handleCloseCheckout}
       className="checkout"
     >
-      <form onSubmit={handleSubmit}>
+      <form className="checkout-form" onSubmit={handleSubmit}>
         <h2>Checkout</h2>
         <p>Total Amount: {currrencyFormatter.format(cartTotal)}</p>
         <Input label="Full Name" type="text" id="name" />

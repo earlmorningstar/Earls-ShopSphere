@@ -18,3 +18,22 @@
     top: 50%;
   left: 50%;
 }
+
+.order-btn {
+  color: #f5f5f7;
+  background-color: #353433;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.checkout-form {
+  display: flex;  
+  flex-direction: column;
+  gap: 10px;
+  padding: 20px 0;
+}

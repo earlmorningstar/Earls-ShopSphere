@@ -20,21 +20,6 @@ export default function MainCollection() {
     return <Error title="Failed to fetch items" message={error} />;
   }
 
-  // useEffect(() => {
-  //   async function fetchFits() {
-  //     const response = await fetch("http://localhost:3001/fits");
-
-  //     if (response.ok) {
-  //       //....
-  //     }
-
-  //     const fits = await response.json();
-  //     setLoadedFits(fits);
-  //   }
-
-  //   fetchFits();
-  // }, []);
-
   return (
     <>
       <h3 className="section-heading">Featured Collection</h3>
