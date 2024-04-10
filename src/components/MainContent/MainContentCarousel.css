@@ -38,7 +38,8 @@
   align-items: center;
   justify-content: space-between;
   text-align: center;
-  background-color: #353433;
+  /* background-color: #353433; */
+  background: linear-gradient(90deg, #0b3e27, #197149);
   color: #ffffff;
   padding: 10px 10px;
   border: none;

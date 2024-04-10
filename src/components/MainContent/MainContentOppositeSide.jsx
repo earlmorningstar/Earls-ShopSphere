@@ -11,7 +11,7 @@ export default function MainContentOppositeSide() {
           Discover all premier deals from our most recent sales, consolidated in
           a single location.
         </h3>
-        <button>Buy Now</button>
+        <button>Discover</button>
       </div>
 
       <div className="top-deals-flex-container">

@@ -5,7 +5,7 @@ import { IoIosHeartEmpty } from "react-icons/io";
 export default function FormelyAquiredProd() {
   return (
     <div className='navFlex'>
-      <IoIosHeartEmpty size={25}/>
+      <IoIosHeartEmpty size={18}/>
       <span className="space">
         <span>Formerly</span>
         <span>Acquired</span>

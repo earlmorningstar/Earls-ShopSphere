@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Tektur:wght@400;500;600;700;800;900&display=swap");
 
 .navbar {
+  background: linear-gradient(90deg, #0b3e27, #197149);
   display: flex;
   align-items: center;
   padding: 8px 1rem;
@@ -17,5 +18,9 @@
   font-family: "Tektur", sans-serif;
   font-size: 23px;
   font-weight: 500;
-  color: #691e1e;
+  /* color: #691e1e; */
+  /* color: #a0937a; */
+  color: #acacac;
+  
+
 }

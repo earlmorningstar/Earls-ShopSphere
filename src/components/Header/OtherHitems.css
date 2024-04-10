@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .space {
   display: flex;
@@ -9,12 +10,16 @@
 }
 
 .navFlex {
-  font-family: "Lato", sans-serif;
-  font-weight: 700;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Manrope", sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  /* font-weight: 700; */
   /* font-size: 15px; */
   display: flex;
   align-items: center;
   gap: 5px;
+  color: #ffffff;
 }
 
 .shoppingCartParent {
@@ -26,4 +31,8 @@
   display: flex;
   align-items: center;
   gap: 3px;
+}
+
+.shoppingCartParent > span {
+  color: #acacac;
 }

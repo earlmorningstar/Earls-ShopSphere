@@ -4,7 +4,7 @@ import { CiUser } from "react-icons/ci";
 export default function SignIn() {
     return   (
         <div className='navFlex'>
-            <CiUser size={25}/>
+            <CiUser size={20}/>
             <div className="space">
             <span>Sign In</span>
             <span>My Account</span>
