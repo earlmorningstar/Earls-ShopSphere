@@ -24,7 +24,13 @@
 }
 
 .overallH {
-  margin: 10px 10px 30px 10px;
+  /* background: url('https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&w=600'); */
+  /* background: url('https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=600'); */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  /* height: 100vh; */
+  padding: 20px 10px 30px 10px;
   display: flex;
   gap: 5px;
   /* position: absolute; */
@@ -147,7 +153,6 @@
   .image-container {
     height: 8vh;
   }
-  
 }
 
 @media screen and (max-width: 1025px) {
@@ -158,7 +163,7 @@
   .top-deals-styles > h3 {
     font-size: 16px;
   }
-  
+
   .top-deals-styles {
     padding: 13px 10px;
   }
@@ -216,7 +221,7 @@
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 600px) {
   .top-deals-flex-container {
     flex-direction: column;
     align-items: center;

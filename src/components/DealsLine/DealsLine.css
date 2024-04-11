@@ -11,11 +11,31 @@
 }
 
 .dealsTitle {
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-underline-offset: 30px;
+
   cursor: pointer;
   font-family: "Nunito Sans", sans-serif;
   font-size: 13px;
   font-weight: 700;
-  padding: 5px 10px;
+  padding: 5px 0;
+}
+
+.dealsTitle::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 1px; /* Adjust the underline height as needed */
+  background-color: #121212; /* Adjust the underline color as needed */
+  transition: width 0.5s ease;
+}
+
+.dealsTitle:hover::before {
+  width: 100%;
 }
 
 /* .dealsTitle:hover {
@@ -31,7 +51,7 @@
   align-items: center;
   justify-content: space-between;
   padding: 8px 1rem;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
   border-bottom: 1px solid #232f3e;
 }
 

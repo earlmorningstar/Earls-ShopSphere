@@ -9,9 +9,29 @@
   border-bottom: 1px solid #232f3e;
 }
 
+@keyframes rotateInCircle {
+  0% {
+      transform: rotate(0deg);
+  }
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
 .logo-icon {
+  perspective: 1000px;
   display: flex;
   gap: 6px;
+}
+
+.logo {
+  display: inline-block;
+  transition: transform 0.5s;
+  animation: rotateInCircle 3s linear;
+}
+
+.flipped {
+  transform: rotateY(180deg);
 }
 
 .logo-icon > span {
@@ -20,7 +40,7 @@
   font-weight: 500;
   /* color: #691e1e; */
   /* color: #a0937a; */
-  color: #acacac;
-  
-
+  /* color: #acacac; */
+  /* color: rgb(113, 158, 174); */
+color:  rgb(139 166 177 / 1);
 }

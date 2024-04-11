@@ -1,23 +1,30 @@
 .search-bar {
     display: flex;
     align-items: center;
-    border: 1px solid #232f3e;
+    /* border: 1px solid #232f3e; */
+    border: 1px solid rgb(139 166 177 / 1);
     border-radius: 5px;
     padding: 3px;
     width: 17rem;
   }
+
+  .search-bar > input::placeholder {
+    color: rgb(161, 188, 199);
+  }
   
   input {
+    background-color: transparent;
     border: none;
     outline: none;
-    padding: 8px;
+    padding: 10px;
     flex: 1;
     border-radius: 5px 0 0 5px;
+    color: rgb(161, 188, 199);
   }
   
   .search-icon {
     cursor: pointer;
     padding: 8px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     border-radius: 0 5px 5px 0;
   }

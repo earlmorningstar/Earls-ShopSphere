@@ -17,7 +17,10 @@ export default function ShoppingCart() {
   }
   return (
     <div onClick={handleShowCart} className="shoppingCartParent">
-      <PiShoppingCart size={25} color="#acacac" />
+      <PiShoppingCart size={25} 
+      // color="#acacac" 
+      color='gold'
+      />
       <span>{totalCartItems}</span>
     </div>
   );
