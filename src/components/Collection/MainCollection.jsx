@@ -29,21 +29,6 @@ export default function MainCollection() {
           <CollectionProduct key={fit} fit={fit} />
         ))}
       </div>
-
-      {/* <div className="coll-Prod-flex">
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-        <CollectionProduct />
-      </div> */}
     </>
   );
 }

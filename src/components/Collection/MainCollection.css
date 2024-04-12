@@ -10,8 +10,9 @@
 }
 
 .coll-prod-parent {
-  background: linear-gradient(90deg, #0b3e27, #197149);
-  color: #ffffff;
+  background: linear-gradient(150deg, rgb(47, 112, 47), rgb(130, 212, 130));
+  /* background: linear-gradient(90deg, #0b3e27, #197149); */
+  /* color: #ffffff; */
   /* font-family: "Roboto Condensed", sans-serif; */
   font-family: "Manrope", sans-serif;
   /* font-family: "Noto Serif KR", serif; */
@@ -63,8 +64,15 @@
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: #f5f5f7;
-  background-color: #353433;
+  color: #121212;
+  background-color: #8ba6b1;
+  /* color: #f5f5f7; */
+  /* background-color: #353433; */
+}
+
+.coll-prod-parent > button:hover {
+  background-color: #79949f;
+  transition: background-color 0.5s ease;
 }
 
 .coll-prod-info {

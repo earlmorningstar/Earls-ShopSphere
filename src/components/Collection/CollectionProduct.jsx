@@ -1,10 +1,9 @@
-import { IoIosHeartEmpty } from "react-icons/io";
-import { GoPlus } from "react-icons/go";
-// import NewFash from "../../assets/NewFash2.png";
-import "./MainCollection.css";
-import { currrencyFormatter } from "../../Util/formatter.js";
 import { useContext } from "react";
 import CartContext from "../../store/CartContext.jsx";
+import { currrencyFormatter } from "../../Util/formatter.js";
+import "./MainCollection.css";
+import { IoIosHeartEmpty } from "react-icons/io";
+import { GoPlus } from "react-icons/go";
 
 export default function CollectionProduct({ fit }) {
   const cartCtx = useContext(CartContext);
@@ -30,7 +29,7 @@ export default function CollectionProduct({ fit }) {
           <span>{fit.description}</span>
         </div>
         <button onClick={handleAddItemToCart}>
-          <GoPlus size={15} color="#ffffff" /> Add
+          <GoPlus size={15} color="#121212" /> Add
         </button>
       </div>
     </>
