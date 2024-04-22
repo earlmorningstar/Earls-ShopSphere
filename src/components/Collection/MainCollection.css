@@ -9,15 +9,16 @@
   margin: 3rem 0 2rem 1rem;
 }
 
-.coll-prod-parent {
-  background: linear-gradient(150deg, rgb(47, 112, 47), rgb(130, 212, 130));
-  /* background: linear-gradient(90deg, #0b3e27, #197149); */
-  /* color: #ffffff; */
-  /* font-family: "Roboto Condensed", sans-serif; */
-  font-family: "Manrope", sans-serif;
-  /* font-family: "Noto Serif KR", serif; */
+.coll-Prod-flex {
+  display: flex;
+  
+  /* padding: 20px; */
+  /* background-color: #d6d3d3; */
+}
 
-  /* background-color: #ecebeb; */
+.coll-prod-parent {
+  /* background: linear-gradient(150deg, rgb(47, 112, 47), rgb(130, 212, 130)); */
+  font-family: "Manrope", sans-serif;
   padding: 8px;
   border-radius: 3px;
   border: 1px solid #9c9c9a;
@@ -27,6 +28,7 @@
   justify-content: space-between;
   gap: 10px;
   width: 150px;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
 .coll-prod-img {
@@ -54,25 +56,33 @@
   font-size: 14px;
 }
 
-.coll-prod-parent > button {
+.coll-prod-parent > span {
+  display: flex;
+  gap: 10px;
+}
+
+.coll-prod-parent-btn {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 4px;
+  padding: 5px 3px;
   width: 60px;
-  /* border: 0.5 white; */
   border: none;
   border-radius: 6px;
   cursor: pointer;
-  color: #121212;
-  background-color: #8ba6b1;
-  /* color: #f5f5f7; */
-  /* background-color: #353433; */
+  /* color: #121212; */
+  /* background-color: #8ba6b1;  */
+  /* background: linear-gradient(20deg, rgb(47, 112, 47), rgb(130, 212, 130)); */
+  background: linear-gradient(90deg, #0b3e27, #197149);
+  color: #f0f0f0;
+  font-size: 12px;
+  
 }
 
-.coll-prod-parent > button:hover {
-  background-color: #79949f;
-  transition: background-color 0.5s ease;
+.coll-prod-parent-btn:hover {
+  /* background: linear-gradient(20deg, rgb(29, 75, 29), rgb(122, 203, 122)); */
+  background: linear-gradient(90deg, #115a39, #218a5b);;
+  transition: background 0.2s ease-in-out;
 }
 
 .coll-prod-info {
@@ -98,7 +108,7 @@
   width: 100%; */
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-row-gap: 10px;
+  grid-row-gap: 18px;
 }
 
 @media screen and (max-width: 1024px) {

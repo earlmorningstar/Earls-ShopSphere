@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import CartContext from "../../store/CartContext.jsx";
+// import { Link } from "react-router-dom";
+
 import { currrencyFormatter } from "../../Util/formatter.js";
 import "./MainCollection.css";
 import { IoIosHeartEmpty } from "react-icons/io";
@@ -26,11 +28,20 @@ export default function CollectionProduct({ fit }) {
         </div>
         <div className="coll-prod-info">
           <h4>{fit.item_name}</h4>
-          <span>{fit.description}</span>
+          {/* <span>{fit.description}</span> */}
         </div>
-        <button onClick={handleAddItemToCart}>
-          <GoPlus size={15} color="#121212" /> Add
+        <span>
+          <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>
+          <GoPlus size={13} 
+          // color="#121212"
+          color="#f7f7f7" /> Add
         </button>
+        {/* <Link to={`/item/${fit.id}`} style={{ textDecoration: 'none' }}> */}
+        <button className="coll-prod-parent-btn">View Item</button>
+        {/* </Link> */}
+        
+        </span>
+        
       </div>
     </>
   );

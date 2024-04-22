@@ -100,6 +100,7 @@ export default function Checkout() {
     >
       <form className="checkout-form" onSubmit={handleSubmit}>
         <h2>Checkout</h2>
+        <hr />
         <p>Total Amount: {currrencyFormatter.format(cartTotal)}</p>
         <Input label="Full Name" type="text" id="name" />
         <Input label="E-mail Address" type="email" id="email" />
@@ -111,6 +112,9 @@ export default function Checkout() {
 
         {error && <Error title="Failed to submit orders" message={error} />}
 
+          {/* <span>
+          <button className="order-btn" type="button" >Back To Checkout</button>
+          </span> */}
         <p className="modal-actions">{buttonActions}</p>
       </form>
     </Modal>

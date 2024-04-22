@@ -31,6 +31,7 @@ export default function Cart() {
       onClose={userProgressCtx.progress === "cart" ? handleCloseCart : null}
     >
       <h2>Your Cart</h2>
+      <hr />
       <ul>
         {cartCtx.items.map((item) => (
           <CartItem

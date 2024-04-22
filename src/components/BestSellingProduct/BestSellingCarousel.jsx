@@ -13,8 +13,8 @@ export default function BestSellingCarousel({ gadget }) {
   }
 
   return (
-    <div className="best-selling-slider-container">
-      <div className="bestSelling-holdingDiv">
+    <>
+    <div className="bestSelling-holdingDiv">
         <div className="bestSelling-ImageParent">
           <img
             src={`http://localhost:3001/${gadget.image}`}
@@ -32,12 +32,15 @@ export default function BestSellingCarousel({ gadget }) {
 
           <div className="bs-span-btn">
             <span>{currrencyFormatter.format(gadget.price)}</span>
+            <button>View Item</button>
             <button onClick={handleAddItemToCart}>
               <GoPlus size={15} color="#ffffff" /> Add
             </button>
           </div>
         </div>
       </div>
-    </div>
+    </>
+    // <div className="best-selling-slider-container">
+      
   );
 }
