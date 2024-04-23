@@ -37,7 +37,12 @@ export default function Checkout() {
     userProgressCtx.hideCheckout();
   }
 
+  // console.log("data:", data);
+  // console.log("error:", error);
+  // console.log("progress:", userProgressCtx.progress);
+
   function handleFinish() {
+    // console.log("HandleFinish Called");
     userProgressCtx.hideCheckout();
     cartCtx.clearCart();
     clearData();
@@ -76,7 +81,7 @@ export default function Checkout() {
     return (
       <Modal
         open={userProgressCtx.progress === "checkout"}
-        onClose={handleFinish}
+        // onClose={handleFinish}
         className="checkout"
       >
         <h2>Success!</h2>
@@ -85,6 +90,7 @@ export default function Checkout() {
           We will get back to you with more details via email within the next
           few minutes.
         </p>
+        <p>Thank you for shopping with us.</p>
         <p className="modal-actions">
           <button onClick={handleFinish}>Okay</button>
         </p>
@@ -112,7 +118,7 @@ export default function Checkout() {
 
         {error && <Error title="Failed to submit orders" message={error} />}
 
-          {/* <span>
+        {/* <span>
           <button className="order-btn" type="button" >Back To Checkout</button>
           </span> */}
         <p className="modal-actions">{buttonActions}</p>

@@ -46,6 +46,7 @@ function App() {
         <Cart />
         <Checkout />
         <UniqueItemsHolder />
+        <MainCollection />
         <MainShopByDepartment />
         <ProsOfShopping />
         <FooterHolder />

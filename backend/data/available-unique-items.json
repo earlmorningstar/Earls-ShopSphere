@@ -1,59 +1,58 @@
 [
-    {
-      "id": "unique1",
-      "item_name": "Men's Vintage Leather Jacket",
-      "price": "149.99",
-      "description": "A timeless leather jacket crafted from premium leather, featuring a classic design and rugged appeal.",
-      "image": "images/leather-jacket.jpg"
-    },
-    {
-      "id": "unique2",
-      "item_name": "Smart Home Assistant",
-      "price": "79.99",
-      "description": "A smart home assistant with voice control capabilities, allowing you to control smart devices, play music, and get information hands-free.",
-      "image": "images/smart-home-assistant.jpg"
-    },
-    {
-      "id": "unique3",
-      "item_name": "Women's Embroidered Blouse",
-      "price": "54.99",
-      "description": "A stylish embroidered blouse with intricate detailing and a relaxed fit, perfect for adding a touch of elegance to any outfit.",
-      "image": "images/embroidered-blouse.jpg"
-    },
-    {
-      "id": "unique4",
-      "item_name": "Men's Casual Sneakers",
-      "price": "69.99",
-      "description": "Classic casual sneakers with a comfortable fit and versatile design, ideal for everyday wear.",
-      "image": "images/casual-sneakers.jpg"
-    },
-    {
-      "id": "unique5",
-      "item_name": "Smart Doorbell Camera",
-      "price": "199.99",
-      "description": "A smart doorbell camera with motion detection, two-way audio, and HD video recording, providing enhanced security and convenience.",
-      "image": "images/smart-doorbell-camera.jpg"
-    },
-    {
-      "id": "unique6",
-      "item_name": "Women's Printed Scarf",
-      "price": "24.99",
-      "description": "A lightweight printed scarf with vibrant colors and soft fabric, perfect for adding a pop of color to any outfit.",
-      "image": "images/printed-scarf.jpg"
-    },
-    {
-      "id": "unique7",
-      "item_name": "Wireless Earbuds",
-      "price": "129.99",
-      "description": "True wireless earbuds with premium sound quality, secure fit, and long-lasting battery life, perfect for on-the-go music and calls.",
-      "image": "images/wireless-earbuds.jpg"
-    },
-    {
-      "id": "unique8",
-      "item_name": "Women's Tote Bag",
-      "price": "89.99",
-      "description": "A spacious tote bag with a stylish design and multiple compartments, perfect for everyday use or weekend getaways.",
-      "image": "images/tote-bag.jpg"
-    }
-  ]
-  
+  {
+    "id": "unique1",
+    "item_name": "Men's Vintage Leather Jacket",
+    "price": "149.99",
+    "description": "A timeless leather jacket crafted from premium leather, featuring a classic design and rugged appeal.",
+    "image": "images/leather-jacket.jpg"
+  },
+  {
+    "id": "unique2",
+    "item_name": "Smart Home Assistant",
+    "price": "79.99",
+    "description": "A smart home assistant with voice control capabilities, allowing you to control smart devices, play music, and get information hands-free.",
+    "image": "images/smart-home-assistant.jpg"
+  },
+  {
+    "id": "unique3",
+    "item_name": "Women's Embroidered Blouse",
+    "price": "54.99",
+    "description": "A stylish embroidered blouse with intricate detailing and a relaxed fit, perfect for adding a touch of elegance to any outfit.",
+    "image": "images/embroidered-blouse.jpg"
+  },
+  {
+    "id": "unique4",
+    "item_name": "Men's Casual Sneakers",
+    "price": "69.99",
+    "description": "Classic casual sneakers with a comfortable fit and versatile design, ideal for everyday wear.",
+    "image": "images/casual-sneakers.jpg"
+  },
+  {
+    "id": "unique5",
+    "item_name": "Smart Doorbell Camera",
+    "price": "199.99",
+    "description": "A smart doorbell camera with motion detection, two-way audio, and HD video recording, providing enhanced security and convenience.",
+    "image": "images/smart-doorbell-camera.jpg"
+  },
+  {
+    "id": "unique6",
+    "item_name": "Women's Printed Scarf",
+    "price": "24.99",
+    "description": "A lightweight printed scarf with vibrant colors and soft fabric, perfect for adding a pop of color to any outfit.",
+    "image": "images/printed-scarf.jpg"
+  },
+  {
+    "id": "unique7",
+    "item_name": "Wireless Earbuds",
+    "price": "129.99",
+    "description": "True wireless earbuds with premium sound quality, secure fit, and long-lasting battery life, perfect for on-the-go music and calls.",
+    "image": "images/wireless-earbuds.jpg"
+  },
+  {
+    "id": "unique8",
+    "item_name": "Women's Tote Bag",
+    "price": "89.99",
+    "description": "A spacious tote bag with a stylish design and multiple compartments, perfect for everyday use or weekend getaways.",
+    "image": "images/tote-bag.jpg"
+  }
+]

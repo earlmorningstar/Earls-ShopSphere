@@ -28,7 +28,7 @@ export default function CollectionProduct({ fit }) {
         </div>
         <div className="coll-prod-info">
           <h4>{fit.item_name}</h4>
-          {/* <span>{fit.description}</span> */}
+          <span>{fit.description}</span>
         </div>
         <span>
           <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>

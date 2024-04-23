@@ -3,7 +3,7 @@
 
 .cart {
   /* background: linear-gradient(150deg, rgb(47, 112, 47), rgb(130, 212, 130)); */
-background: linear-gradient(90deg, #0b3e27, #197149);
+  background: linear-gradient(90deg, #0b3e27, #197149);
   color: #f0f0f0;
   font-family: "Lato", sans-serif;
   font-optical-sizing: auto;

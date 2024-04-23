@@ -26,7 +26,7 @@ export default function Cart() {
 
   return (
     <Modal
-      className="cart"
+      className='cart'
       open={userProgressCtx.progress === "cart"}
       onClose={userProgressCtx.progress === "cart" ? handleCloseCart : null}
     >
