@@ -11,9 +11,6 @@
 
 .coll-Prod-flex {
   display: flex;
-  
-  /* padding: 20px; */
-  /* background-color: #d6d3d3; */
 }
 
 .coll-prod-parent {
@@ -21,7 +18,7 @@
   font-family: "Manrope", sans-serif;
   padding: 8px;
   border-radius: 3px;
-  border: 1px solid #9c9c9a;
+  border: 1px solid rgba(0, 0, 0, 0.5);
   margin-left: 1rem;
   display: flex;
   flex-direction: column;
@@ -77,6 +74,10 @@
   color: #f0f0f0;
   font-size: 12px;
   
+}
+
+.like-icon {
+  cursor: pointer;
 }
 
 .coll-prod-parent-btn:hover {

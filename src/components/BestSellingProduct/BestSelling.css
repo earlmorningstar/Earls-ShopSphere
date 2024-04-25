@@ -13,10 +13,14 @@
   display: flex;
   flex-direction: column;
   cursor: pointer;
-  padding: 8px;
-  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+  padding: 6px;
+  height: 22rem;
+  border-left: 1px solid rgba(0, 0, 0, 0.5);
+  border-right: 1px solid rgba(0, 0, 0, 0.5);
+  /* border: 1px solid rgba(0, 0, 0, 0.5); */
+  /* box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5); */
   margin: 0 0.5rem;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
 .bestSelling-info-rating-price {
@@ -26,8 +30,13 @@
 }
 
 .bestSelling-info-rating-price > h4 {
-  font-size: 15px;
-  font-weight: 600;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.bestSelling-info-rating-price > span {
+  font-size: 14px;
+  font-weight: 400;
 }
 
 .bs-span-btn {
@@ -64,13 +73,13 @@
 
 .bestSelling-ImageParent {
   margin: 0 auto;
-  width: 100px;
+  width: 80px;
   height: 35vh;
 }
 
 .bestSelling-ImageParent > img {
   object-fit: contain;
   display: block;
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
 }

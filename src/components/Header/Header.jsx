@@ -3,11 +3,11 @@ import "./Header.css";
 import Section from "./Sections/Section";
 import Facilities from "./Facilities/Facilities";
 import SearchBar from "../SearchBar/SearchBar";
-import PrevPurchasedItems from "./FormelyAquiredProd/FormerlyAquiredProd";
 import SignIn from "./SignIn/SignIn";
 import ShoppingCart from "./ShoppingCart/ShoppingCart";
 // import { FaGlobeAmericas } from "react-icons/fa";
 import { SiCommerzbank } from "react-icons/si";
+import FavoritedProd from "./FavoritedProd/FavoritedProd";
 // import { FaBars } from "react-icons/fa6";
 // import { GrClose } from "react-icons/gr";
 // import { Link } from "react-router-dom";
@@ -40,7 +40,8 @@ export default function Header() {
       <Section />
       <Facilities />
       <SearchBar />
-      <PrevPurchasedItems />
+      <FavoritedProd />
+      {/* <PrevPurchasedItems /> */}
       <SignIn />
       <ShoppingCart />
     </nav>

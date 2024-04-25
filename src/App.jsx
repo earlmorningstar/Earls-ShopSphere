@@ -1,7 +1,6 @@
-// import { createBrowserRouter, RouterProvider } from "react-router-dom";
-// import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { UserProgressContextProvider } from "./store/UserProgressContext.jsx";
 import { CartContextProvider } from "./store/CartContext.jsx";
+import { LikedItemsContextProvider } from "./store/LikedItemsContext.jsx";
 
 import AdsLine from "./components/Adsline/Adsline.jsx";
 import DealsLine from "./components/DealsLine/Dealsline.jsx";
@@ -15,41 +14,28 @@ import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.j
 import FooterHolder from "./components/Footer/FooterHolder.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Checkout from "./components/Checkout.jsx";
-// import ViewItem from "./components/ViewItem.jsx";
-// import RootLayout from "./components/RootLayout.jsx";
-// import ErrorPage from "./components/Error.js";
-
-// const router = createBrowserRouter([
-//   {
-//     path: '/',
-//     element: <RootLayout />,
-//     errorElement: <ErrorPage />,
-//     // id: 'root',
-//     // loader:
-//     children: [
-
-//     ]
-//   }
-// ]);
+import Likes from "./components/Favorited/Likes.jsx";
 
 function App() {
   return (
     <UserProgressContextProvider>
       <CartContextProvider>
-        <AdsLine />
-        <Header />
-        <DealsLine />
-        <MainContentCarousel />
-        <MainCollection />
-        <BestSellingProd />
-        <MainCollection />
-        <Cart />
-        <Checkout />
-        <UniqueItemsHolder />
-        <MainCollection />
-        <MainShopByDepartment />
-        <ProsOfShopping />
-        <FooterHolder />
+        <LikedItemsContextProvider>
+          <AdsLine />
+          <Header />
+          <DealsLine />
+          <MainContentCarousel />
+          <MainCollection />
+          <BestSellingProd />
+          <Cart />
+          <Likes />
+          <Checkout />
+          <UniqueItemsHolder />
+          <MainCollection />
+          <MainShopByDepartment />
+          <ProsOfShopping />
+          <FooterHolder />
+        </LikedItemsContextProvider>
       </CartContextProvider>
     </UserProgressContextProvider>
   );

@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Domine:wght@400..700&display=swap");
+
+.likes{ 
+    background: linear-gradient(90deg, #0b3e27, #197149);
+    color: #f0f0f0;
+    font-family: "Lato", sans-serif;
+    font-optical-sizing: auto;
+    padding: 10px 20px;
+    transform: translate(-50%, -50%);
+    width: auto;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    border: 1px solid #353433;
+    border-radius: 8px;
+    box-shadow: 0 0 10px #353433;
+}
+
+.modal-actions > button {
+    color: #f5f5f7;
+    background-color: #353433;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }

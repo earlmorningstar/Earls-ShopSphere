@@ -6,6 +6,8 @@ const UserProgressContext = createContext({
   hideCart: () => {},
   showCheckout: () => {},
   hideCheckout: () => {},
+  showLikedItem: () => {},
+  hideLikedItem: () => {},
 });
 
 export function UserProgressContextProvider({ children }) {
@@ -26,12 +28,22 @@ export function UserProgressContextProvider({ children }) {
     setUserProgress("");
   }
 
+  function showLikedItem() {
+    setUserProgress("favorited");
+  }
+
+  function hideLikedItem() {
+    setUserProgress("");
+  }
+
   const userProgressCtx = {
     progress: userProgress,
     showCart,
     hideCart,
     showCheckout,
     hideCheckout,
+    showLikedItem,
+    hideLikedItem,
   };
   return (
     <UserProgressContext.Provider value={userProgressCtx}>

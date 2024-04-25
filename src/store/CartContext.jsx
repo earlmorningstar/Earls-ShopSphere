@@ -50,8 +50,8 @@ function CartReducer(state, action) {
     return { ...state, items: updatedItems };
   }
 
-  if(action.type === "CLEAR_CART") {
-    return {...state, items: []};
+  if (action.type === "CLEAR_CART") {
+    return { ...state, items: [] };
   }
 
   return state;
@@ -69,7 +69,7 @@ export function CartContextProvider({ children }) {
   }
 
   function clearCart() {
-    dispatchCartAction({type: "CLEAR_CART"})
+    dispatchCartAction({ type: "CLEAR_CART" });
   }
 
   const cartContext = {
@@ -79,7 +79,7 @@ export function CartContextProvider({ children }) {
     clearCart: clearCart,
   };
 
-//   console.log(cartContext);
+  //   console.log(cartContext);
 
   return (
     <CartContext.Provider value={cartContext}>{children}</CartContext.Provider>
