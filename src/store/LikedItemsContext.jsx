@@ -1,10 +1,11 @@
-import { createContext, useReducer } from "react";
+import { createContext, useReducer, useEffect } from "react";
 
 const LikedItemsContext = createContext({
   items: [],
   addLikedItem: (items) => {},
   removeLikedItem: (id) => {},
   clearLikedItem: () => {},
+  isItemLiked: (item) => false,
 });
 
 function LikedItemsReducer(state, action) {
@@ -60,6 +61,17 @@ export function LikedItemsContextProvider({ children }) {
     items: [],
   });
 
+  // useEffect(() => {
+  //   const storedLikedItems = JSON.parse(localStorage.getItem("likedItems"));
+  //   if (storedLikedItems) {
+  //     dispatchLikedItemsAction({ type: "SET_LIKED_ITEMS", items: storedLikedItems });
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   localStorage.setItem("likedItems", JSON.stringify(likedItems.items));
+  // }, [likedItems.items]);
+
   function addLikedItem(item) {
     dispatchLikedItemsAction({ type: "ADD_LIKED_ITEMS", item: item });
   }
@@ -72,11 +84,16 @@ export function LikedItemsContextProvider({ children }) {
     dispatchLikedItemsAction({ type: "CLEAR_LIKED_ITEMS" });
   }
 
+  function isItemLiked(item) {
+    return likedItems.items.some((likedItem) => likedItem.id === item.id);
+  }
+
   const likedItemsContext = {
     items: likedItems.items,
     addLikedItem: addLikedItem,
     removeLikedItem: removeLikedItem,
     clearLikedItem: clearLikedItem,
+    isItemLiked: isItemLiked,
   };
 
   return (
@@ -86,40 +103,3 @@ export function LikedItemsContextProvider({ children }) {
   );
 }
 export default LikedItemsContext;
-
-// import { createContext, useContext, useState } from 'react';
-
-// const LikedItemsContext = createContext();
-
-// export const useFavorites = () => {
-//   return useContext(LikedItemsContext);
-// };
-
-// export const FavoritesProvider = ({ children }) => {
-//   const [favoriteItems, setFavoriteItems] = useState([]);
-
-//   const addLikedItem = (item) => {
-//     setFavoriteItems(prevFavoriteItems => [...prevFavoriteItems, item]);
-//   };
-
-//   const removeLikedItem = (item) => {
-//     setFavoriteItems(prevFavoriteItems => prevFavoriteItems.filter(i => i !== item));
-//   };
-
-//   const isItemFavorite = (item) => {
-//     return favoriteItems.includes(item);
-//   };
-
-//   const likedItemsContext = {
-//     items,
-//     addLikedItem,
-//     removeLikedItem,
-//     isItemFavorite,
-//   };
-
-//   return (
-//     <LikedItemsContext.Provider value={likedItemsContext}>
-//       {children}
-//     </LikedItemsContext.Provider>
-//   );
-// };

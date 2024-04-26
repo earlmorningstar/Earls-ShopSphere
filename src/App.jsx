@@ -31,7 +31,6 @@ function App() {
           <Likes />
           <Checkout />
           <UniqueItemsHolder />
-          <MainCollection />
           <MainShopByDepartment />
           <ProsOfShopping />
           <FooterHolder />

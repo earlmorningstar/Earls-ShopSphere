@@ -3,7 +3,8 @@ import UserProgressContext from "../../../store/UserProgressContext";
 import LikedItemsContext from "../../../store/LikedItemsContext";
 
 import "../OtherHitems.css";
-import { IoIosHeartEmpty } from "react-icons/io";
+
+import { FaHeart } from "react-icons/fa";
 
 export default function FavoritedProd() {
   const likedItemCtx = useContext(LikedItemsContext);
@@ -24,15 +25,14 @@ export default function FavoritedProd() {
   }
 
   return (
-    <div onClick={handleShowLikedItem} className="navFlex">
-      <p className="heart">
-        <IoIosHeartEmpty size={18} />
+    <div onClick={handleShowLikedItem} className="navFlexLiked">
+      <p id="heart">
+        <FaHeart size={16} />
       </p>
       <span>{totalLikedItems}</span>
+
       {/* <span className="space">
-        <span>Formerly</span>
-        <span>Acquired</span>
-        <span>Product</span>
+        <span>Favorites</span>
       </span> */}
     </div>
   );

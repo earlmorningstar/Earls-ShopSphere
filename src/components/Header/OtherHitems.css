@@ -30,14 +30,14 @@
   color: #ffffff;
 }
 
-.heart{
+#heart{
   display: inline-block;
   transition: transform 0.5s;
 }
 
-.heart:hover {
+#heart:hover {
   color: red;
-  transform: rotateY(180deg); /* Rotate the heart icon 180 degrees on hover */
+  transform: rotateY(180deg);
 }
 
 .navFlex > span {
@@ -45,14 +45,37 @@
   text-decoration: none;
 }
 
+.navFlexLiked {
+  cursor: pointer;
+  font-family: "Domine", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-size: 12px;;
+  color: #FFFFFF;
+  display: flex;
+  gap: 3px;
+  align-items: center;
+  position: relative;
+}
+
+.navFlexLiked > span {
+  position: absolute;
+  top: -9px; 
+  right: -12px; 
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%; 
+  padding: 1px 5px;
+}
+
+
 .navFlex > span::before {
   content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 0;
-    height: 1.5px; /* Adjust the underline height as needed */
-    background-color: #8BA6B1; /* Adjust the underline color as needed */
+    height: 1.5px;
+    background-color: #8BA6B1;
     transition: width 0.5s ease;
 }
 
@@ -64,8 +87,8 @@
   cursor: pointer;
   font-family: "Domine", serif;
   font-optical-sizing: auto;
-  font-weight: 700;
-  font-size: 15px;
+  font-weight: 500;
+  font-size: 12px;
   display: flex;
   align-items: center;
   gap: 3px;
@@ -73,5 +96,12 @@
 
 .shoppingCartParent > span {
   /* color: #acacac; */
-color: rgb(255, 217, 3);
+/* color: rgb(255, 217, 3); */
+color: #FFFFFF;
+position: absolute;
+  top: 9px; 
+  right: 8px; 
+  background-color: rgb(255, 0, 0);
+  border-radius: 50%; 
+  padding: 1px 5px;
 }

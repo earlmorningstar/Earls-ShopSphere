@@ -46,6 +46,7 @@ export default function Cart() {
       </ul>
       <p className="cart-total">{currrencyFormatter.format(cartTotal)}</p>
       <p className="modal-actions">
+        {cartCtx.items.length <= 0 && <span>You don't have any selected items to view.</span>}
         <Button onClick={handleCloseCart}>Close</Button>
         {cartCtx.items.length > 0 && (
           <Button onClick={handleGoToCheckout}>Go to checkout</Button>

@@ -1,10 +1,9 @@
-import { useContext, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/CartContext.jsx";
 import LikedItemsContext from "../../store/LikedItemsContext.jsx";
 
 import { currrencyFormatter } from "../../Util/formatter.js";
 import "./MainCollection.css";
-// import { IoIosHeartEmpty } from "react-icons/io";
 import { FaHeart } from "react-icons/fa";
 import { GoPlus } from "react-icons/go";
 
@@ -12,20 +11,24 @@ export default function CollectionProduct({ fit }) {
   const cartCtx = useContext(CartContext);
   const likedItemCtx = useContext(LikedItemsContext);
 
-  const [isClicked, setIsClicked] = useState(false);
+  const [isLiked, setIsLiked] = useState(false);
 
+  useEffect(() => {
+    setIsLiked(likedItemCtx.isItemLiked(fit));
+  }, [likedItemCtx.items, fit]);
 
   function handleAddItemToCart() {
     cartCtx.addItem(fit);
   }
 
-  function handleAddLikedItem() {
-    likedItemCtx.addLikedItem(fit);
-  }
-
-  const handleClick = (event) => {
-    event.stopPropagation();
-    setIsClicked(prevIsClicked => !prevIsClicked);
+  function handleToggleAddLikedItem(e) {
+    e.stopPropagation();
+    if (isLiked) {
+      likedItemCtx.removeLikedItem(fit.id);
+    } else {
+      likedItemCtx.addLikedItem(fit);
+    }
+    setIsLiked(!isLiked);
   }
 
   return (
@@ -35,10 +38,8 @@ export default function CollectionProduct({ fit }) {
       </div>
       <div className="coll-prod-price-star-parent">
         <span>{currrencyFormatter.format(fit.price)}</span>
-        <span className="like-icon" 
-        onClick={handleAddLikedItem}
-        >
-          <FaHeart onClick={handleClick} size={16} color={isClicked ? 'red' : 'black'}/>
+        <span className="like-icon" onClick={handleToggleAddLikedItem}>
+          <FaHeart size={16} color={isLiked ? "red" : "black"} />
         </span>
       </div>
       <div className="coll-prod-info">
@@ -49,14 +50,11 @@ export default function CollectionProduct({ fit }) {
         <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>
           <GoPlus
             size={13}
-            // color="#121212"
             color="#f7f7f7"
           />{" "}
           Add
         </button>
-        {/* <Link to={`/item/${fit.id}`} style={{ textDecoration: 'none' }}> */}
         <button className="coll-prod-parent-btn">View Item</button>
-        {/* </Link> */}
       </span>
     </div>
   );

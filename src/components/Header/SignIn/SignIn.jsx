@@ -1,11 +1,11 @@
 import "../OtherHitems.css";
-import { CiUser } from "react-icons/ci";
+import { FaUser } from "react-icons/fa6";
 
 export default function SignIn() {
   return (
     <div className="navFlex">
       <p>
-      <CiUser size={20} />
+      <FaUser size={18} />
       </p>
 
       {/* <div className="space">

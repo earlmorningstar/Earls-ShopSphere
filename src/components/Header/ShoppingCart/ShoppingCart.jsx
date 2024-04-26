@@ -1,5 +1,5 @@
 import "../OtherHitems.css";
-import { PiShoppingCart } from "react-icons/pi";
+import { PiShoppingCartFill } from "react-icons/pi";
 import { useContext } from "react";
 import CartContext from "../../../store/CartContext.jsx";
 import UserProgressContext from "../../../store/UserProgressContext.jsx";
@@ -23,11 +23,14 @@ export default function ShoppingCart() {
   }
   return (
     <div onClick={handleShowCart} className="shoppingCartParent">
-      <PiShoppingCart
-        size={25}
-        // color="#acacac"
-        color="gold"
+      <p>
+        <PiShoppingCartFill
+        size={22}
+        // color="gold"
+        color="#FFFFFF"
       />
+      </p>
+      
       <span>{totalCartItems}</span>
     </div>
   );

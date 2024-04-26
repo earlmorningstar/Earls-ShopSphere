@@ -3,12 +3,10 @@ import LikedItemsContext from "../../store/LikedItemsContext";
 import UserProgressContext from "../../store/UserProgressContext.jsx";
 
 import Button from "../../UserInterface/Button.jsx";
-// import { currrencyFormatter } from "../../Util/formatter";
 import Modal from "../../UserInterface/Modal.jsx";
-
 import LikedItem from "./LikedItem.jsx";
 import './Likes.css';
-// import { useFavorites } from "../../store/LikedItemsContext";
+
 
 export default function Likes() {
   const likedItemCtx = useContext(LikedItemsContext);
@@ -30,10 +28,9 @@ export default function Likes() {
       <hr />
       <ul>
         {likedItemCtx.items.map((item) => (
-          <LikedItem 
+          <LikedItem
           key={item.id} 
-          name={item.item_name} 
-          price={item.price} 
+          name={item.item_name} price={item.price} 
           onRemove={() => likedItemCtx.removeLikedItem(item.id)}
           />
         ))}
