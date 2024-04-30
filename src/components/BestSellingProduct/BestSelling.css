@@ -29,7 +29,17 @@
   gap: 10px;
 }
 
-.bestSelling-info-rating-price > h4 {
+/* .bestSelling-info-rating-price > h4 {
+  font-size: 14px;
+  font-weight: 500;
+} */
+
+.itemName{
+  display: flex;
+  justify-content: space-between;
+}
+
+.itemName > h4 {
   font-size: 14px;
   font-weight: 500;
 }

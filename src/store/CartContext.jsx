@@ -1,6 +1,6 @@
 import { createContext,
    useReducer, 
-  useEffect, 
+  // useEffect, 
   // useState,
  } from "react";
 
@@ -64,33 +64,22 @@ function CartReducer(state, action) {
 export function CartContextProvider({ children }) {
   const [cart, dispatchCartAction] = useReducer(CartReducer, { items: [] });
 
-
-  // useEffect(() => {
-  //   const storedCartItems = JSON.parse(localStorage.getItem("cart"));
-  //   if (storedCartItems) {
-  //     dispatchCartAction({ type: "SET_CART_ITEMS", items: storedCartItems });
-  //   }
-  // }, []);
-
-  // useEffect(() => {
-  //   localStorage.setItem("cart", JSON.stringify(cart.items));
-  // }, [cart.items]);
-
-
-
-// -----------------------------
-
-//   const [cartItemsStored, setCartItemsStored] = useState([]);
+// const [refreshKey, setRefreshKey] = useState(Date.now());
 
 // useEffect(() => {
-//   setCartItemsStored(cartItems.items);
-// }, [cartItems.items]);
+//   console.log("Retrieving cart items from localStorage");
+//   const storedCartItems = JSON.parse(localStorage.getItem("cartItems"));
+//   console.log("Stored cart items:", storedCartItems);
+//   if (storedCartItems) {
+//     dispatchCartAction({ type: "SET_CART_ITEMS", items: storedCartItems });
+//   }
+//   // setRefreshKey(Date.now());
+// }, []);
 
 // useEffect(() => {
-//   localStorage.setItem("cartItems", JSON.stringify(cartItemsStored));
-// }, [cartItemsStored]);
+//   localStorage.setItem("cartItems", JSON.stringify(cart.items));
+// }, [cart.items]);
 
-// -----------------------------
 
   function addItem(item) {
     dispatchCartAction({ type: "ADD_ITEMS", item: item });

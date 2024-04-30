@@ -17,10 +17,13 @@ import Checkout from "./components/Checkout.jsx";
 import Likes from "./components/Favorited/Likes.jsx";
 
 function App() {
+  const storedLikedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
+  const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
+
   return (
     <UserProgressContextProvider>
-      <CartContextProvider>
-        <LikedItemsContextProvider>
+      <LikedItemsContextProvider initialItems={storedLikedItems}>
+        <CartContextProvider initialItems={storedCartItems}>
           <AdsLine />
           <Header />
           <DealsLine />
@@ -34,8 +37,8 @@ function App() {
           <MainShopByDepartment />
           <ProsOfShopping />
           <FooterHolder />
-        </LikedItemsContextProvider>
-      </CartContextProvider>
+        </CartContextProvider>
+      </LikedItemsContextProvider>
     </UserProgressContextProvider>
   );
 }

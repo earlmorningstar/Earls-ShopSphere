@@ -5,12 +5,8 @@ import Facilities from "./Facilities/Facilities";
 import SearchBar from "../SearchBar/SearchBar";
 import SignIn from "./SignIn/SignIn";
 import ShoppingCart from "./ShoppingCart/ShoppingCart";
-// import { FaGlobeAmericas } from "react-icons/fa";
 import { SiCommerzbank } from "react-icons/si";
 import FavoritedProd from "./FavoritedProd/FavoritedProd";
-// import { FaBars } from "react-icons/fa6";
-// import { GrClose } from "react-icons/gr";
-// import { Link } from "react-router-dom";
 
 export default function Header() {
   const [flipped, setFlipped] = useState(false);
@@ -41,15 +37,9 @@ export default function Header() {
       <Facilities />
       <SearchBar />
       <FavoritedProd />
-      {/* <PrevPurchasedItems /> */}
       <SignIn />
       <ShoppingCart />
     </nav>
   );
 }
 
-// color="#691E1E"
-// color="#FFFFFF"
-// color="#e3c485"
-// color='#a0937a'
-//  color="#acacac"

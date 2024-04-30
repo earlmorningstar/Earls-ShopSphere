@@ -1,15 +1,35 @@
-import { currrencyFormatter } from "../../Util/formatter.js";
-import { useContext } from "react";
+import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/CartContext";
+import LikedItemsContext from "../../store/LikedItemsContext.jsx";
+
+import { currrencyFormatter } from "../../Util/formatter.js";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
+import { FaHeart } from "react-icons/fa";
 
 export default function BestSellingCarousel({ gadget }) {
   const cartCtx = useContext(CartContext);
+  const likedItemCtx = useContext(LikedItemsContext);
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  useEffect(() => {
+    setIsLiked(likedItemCtx.isItemLiked(gadget));
+  }, [likedItemCtx.items, gadget]);
 
   function handleAddItemToCart() {
     cartCtx.addItem(gadget);
+  }
+
+  function handleToggleAddLikedItem(e) {
+    e.stopPropagation();
+    if (isLiked) {
+      likedItemCtx.removeLikedItem(gadget.id);
+    } else {
+      likedItemCtx.addLikedItem(gadget);
+    }
+    setIsLiked(!isLiked);
   }
 
   return (
@@ -21,7 +41,13 @@ export default function BestSellingCarousel({ gadget }) {
         />
       </div>
       <div className="bestSelling-info-rating-price">
-        <h4>{gadget.item_name}</h4>
+        <aside className="itemName">
+          <h4>{gadget.item_name}</h4>
+        <p onClick={handleToggleAddLikedItem}>
+          <FaHeart  size={16} color={isLiked ? "red" : "black"}/>
+        </p>
+        </aside>
+          
         <span>{gadget.description}</span>
         <div>
           <Stack spacing={1}>

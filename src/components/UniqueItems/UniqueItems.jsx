@@ -1,16 +1,35 @@
 import { useState, useEffect, useContext } from "react";
-import { currrencyFormatter } from "../../Util/formatter.js";
 import CartContext from "../../store/CartContext";
+import LikedItemsContext from "../../store/LikedItemsContext.jsx";
+import { currrencyFormatter } from "../../Util/formatter.js";
 import "./UniqueItems.css";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
+import { FaHeart } from "react-icons/fa";
 
 export default function UniqueItems({ uniqueItem }) {
   const cartCtx = useContext(CartContext);
+  const likedItemCtx = useContext(LikedItemsContext);
+
+  const [isLiked, setIsLiked] = useState(false);
+
+  useEffect(() => {
+    setIsLiked(likedItemCtx.isItemLiked(uniqueItem));
+  }, [likedItemCtx.items, uniqueItem]);
 
   function handleAddItemToCart() {
     cartCtx.addItem(uniqueItem);
+  }
+
+  function handleToggleAddLikedItem(e) {
+    e.stopPropagation();
+    if (isLiked) {
+      likedItemCtx.removeLikedItem(uniqueItem.id);
+    } else {
+      likedItemCtx.addLikedItem(uniqueItem);
+    }
+    setIsLiked(!isLiked);
   }
 
   const [countdown, setCountdown] = useState({
@@ -74,7 +93,13 @@ export default function UniqueItems({ uniqueItem }) {
             <Rating name="rating" defaultValue={0} precision={1} />
           </Stack>
         </div>
-        <h4>{currrencyFormatter.format(uniqueItem.price)}</h4>
+        <span className="price-like">
+          <span onClick={handleToggleAddLikedItem}>
+            <FaHeart size={16} color={isLiked ? "red" : "white"}/>
+          </span>
+          <h4>{currrencyFormatter.format(uniqueItem.price)}</h4>
+        </span>
+
         <div className="uniqueCountdown">
           <p>Days: {countdown.days}</p>
           <p>Hours: {countdown.hours}</p>

@@ -1,4 +1,6 @@
-import { createContext, useReducer, useEffect } from "react";
+import { createContext, useReducer, 
+  // useEffect 
+} from "react";
 
 const LikedItemsContext = createContext({
   items: [],
@@ -57,12 +59,15 @@ function LikedItemsReducer(state, action) {
 }
 
 export function LikedItemsContextProvider({ children }) {
+
   const [likedItems, dispatchLikedItemsAction] = useReducer(LikedItemsReducer, {
     items: [],
   });
 
   // useEffect(() => {
+  //   console.log("Retrieving liked items from localStorage");
   //   const storedLikedItems = JSON.parse(localStorage.getItem("likedItems"));
+  //   console.log("Stored liked items:", storedLikedItems);
   //   if (storedLikedItems) {
   //     dispatchLikedItemsAction({ type: "SET_LIKED_ITEMS", items: storedLikedItems });
   //   }
@@ -71,6 +76,7 @@ export function LikedItemsContextProvider({ children }) {
   // useEffect(() => {
   //   localStorage.setItem("likedItems", JSON.stringify(likedItems.items));
   // }, [likedItems.items]);
+
 
   function addLikedItem(item) {
     dispatchLikedItemsAction({ type: "ADD_LIKED_ITEMS", item: item });
