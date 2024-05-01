@@ -26,7 +26,7 @@ export default function MainCollection() {
 
       <div className="coll-Prod-flex">
         {loadedFits.map((fit) => (
-          <CollectionProduct key={fit} fit={fit} />
+          <CollectionProduct key={fit.id} fit={fit} />
         ))}
       </div>
     </>

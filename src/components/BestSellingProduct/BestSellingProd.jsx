@@ -64,7 +64,7 @@ export default function BestSellingProd() {
       </h3>
       <Slider {...bestSellingCarouselSettings}>
         {loadedGadgets.map((gadget) => (
-          <BestSellingCarousel key={gadget} gadget={gadget} />
+          <BestSellingCarousel key={gadget.id} gadget={gadget} />
         ))}
       </Slider>
     </>

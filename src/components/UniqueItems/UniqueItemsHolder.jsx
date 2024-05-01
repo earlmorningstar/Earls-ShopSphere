@@ -26,7 +26,7 @@ export default function UniqueItemsHolder() {
       <h3 className="unique-section-heading">Unique Items</h3>
       <div className="unique-grid">
         {loadedUniqueItems.map((uniqueItem) => (
-          <UniqueItems key={uniqueItem} uniqueItem={uniqueItem} />
+          <UniqueItems key={uniqueItem.id} uniqueItem={uniqueItem} />
         ))}
       </div>
     </div>
