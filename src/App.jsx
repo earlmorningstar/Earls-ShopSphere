@@ -2,7 +2,7 @@ import { UserProgressContextProvider } from "./store/UserProgressContext.jsx";
 import { CartContextProvider } from "./store/CartContext.jsx";
 import { LikedItemsContextProvider } from "./store/LikedItemsContext.jsx";
 
-// import AdsLine from "./components/Adsline/Adsline.jsx";
+import AdsLine from "./components/Adsline/Adsline.jsx";
 import DealsLine from "./components/DealsLine/Dealsline.jsx";
 import Header from "./components/Header/Header.jsx";
 import MainContentCarousel from "./components/MainContent/MainContentCarousel.jsx";
@@ -17,14 +17,12 @@ import Checkout from "./components/Checkout.jsx";
 import Likes from "./components/Favorited/Likes.jsx";
 
 function App() {
-  // const storedLikedItems = JSON.parse(localStorage.getItem("likedItems")) || [];
-  // const storedCartItems = JSON.parse(localStorage.getItem("cartItems")) || [];
 
   return (
     <UserProgressContextProvider>
       <LikedItemsContextProvider>
         <CartContextProvider>
-          {/* <AdsLine /> */}
+          <AdsLine />
           <Header />
           <DealsLine />
           <MainContentCarousel />
