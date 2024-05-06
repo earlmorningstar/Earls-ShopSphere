@@ -111,7 +111,7 @@
   font-weight: 500;
 }
 
-.adress-parent {
+.address-parent {
   background-color: #f0f0f0;
   color: #232f2e;
   padding: 8px;
@@ -121,13 +121,13 @@
   gap: 10px;
 }
 
-.adress-parent > div {
+.address-parent > div {
   display: flex;
   gap: 10px;
   align-items: center;
 }
 
-.adress-parent > button {
+.address-parent > button {
   cursor: pointer;
   background-color: #353433;
   color: #f0f0f0;
@@ -136,7 +136,7 @@
   border-radius: 16px;
 }
 
-.adress-parent > button:hover {
+.address-parent > button:hover {
   background-color: #344140;
 }
 

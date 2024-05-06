@@ -1,35 +1,108 @@
-import { MdOutlineLocalShipping } from "react-icons/md";
-import { LiaTruckPickupSolid } from "react-icons/lia";
-import { HiOutlineInboxIn } from "react-icons/hi";
+import { useState, useEffect } from "react";
 import { CiLocationOn } from "react-icons/ci";
 import { AiOutlineHome } from "react-icons/ai";
 
 export default function DropDownOption() {
+  const [countries, setCountries] = useState([]);
+  const [selectedCountry, setSelectedCountry] = useState("");
+  const [states, setStates] = useState([]);
+  const [selectedState, setSelectedState] = useState("");
+  const [iso3, setIso3] = useState("");
+  const [stateCode, setStateCode] = useState("");
+
+  const url = "https://countriesnow.space/api/v0.1/countries/states";
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(url, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        if (data.error === false) {
+          setCountries(data.data);
+        } else {
+          console.error("Error fetching countries:", data.msg);
+        }
+      } catch (error) {
+        console.error("Error fetching countries:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    if (selectedCountry && countries.length > 0) {
+      const selectedCountryData = countries.find(
+        (country) => country.name === selectedCountry
+      );
+      if (selectedCountryData) {
+        setStates(selectedCountryData.states.map((state) => state.name));
+        setIso3(selectedCountryData.iso3);
+      }
+    }
+  }, [selectedCountry, countries]);
+
+  const handleCountryChange = (event) => {
+    const country = event.target.value;
+    setSelectedCountry(country);
+
+    // Reset states and codes
+    setStates([]);
+    setIso3("");
+    setSelectedState("");
+    setStateCode("");
+  };
+
+  const handleStateChange = (event) => {
+    const state = event.target.value;
+    setSelectedState(state);
+
+    const selectedCountryData = countries.find(
+      (country) => country.name === selectedCountry
+    );
+    if (selectedCountryData) {
+      const selectedStateData = selectedCountryData.states.find(
+        (s) => s.name === state
+      );
+      if (selectedStateData) {
+        setStateCode(selectedStateData.state_code);
+      }
+    }
+  };
+
   return (
     <div className="dropDownOption">
-      <div className="delivery selection-set">
-        <div className="each-selection-set">
-          <span>
-            <MdOutlineLocalShipping size={30} />
-          </span>
-          <p>Shipping</p>
-        </div>
-
-        <div className="each-selection-set">
-          <span>
-            <LiaTruckPickupSolid size={30} />
-          </span>
-          <p>Pickup</p>
-        </div>
-
-        <div className="each-selection-set">
-          <span>
-            <HiOutlineInboxIn size={30} />
-          </span>
-          <p>Delivery</p>
-        </div>
+      <div>
+        <select value={selectedCountry} onChange={handleCountryChange}>
+          <option value="">Select Country</option>
+          {countries.map((country) => (
+            <option key={country.name} value={country.name}>
+              {country.name}
+            </option>
+          ))}
+        </select>
+        <p>ISO3: {iso3}</p>
+        {selectedCountry && (
+          <div>
+            <select value={selectedState} onChange={handleStateChange}>
+              <option value="">Select State</option>
+              {states.map((state) => (
+                <option key={state} value={state}>
+                  {state}
+                </option>
+              ))}
+            </select>
+            <p>State Code: {stateCode}</p>
+          </div>
+        )}
       </div>
-      <div className="adress-parent">
+
+      <div className="address-parent">
         <div>
           <CiLocationOn size={18} />
           <div className="address-title">
@@ -40,7 +113,7 @@ export default function DropDownOption() {
         <button>Insert Address</button>
       </div>
 
-      <div className="adress-parent">
+      <div className="address-parent">
         <div>
           <AiOutlineHome size={18} />
           <div className="address-title">
