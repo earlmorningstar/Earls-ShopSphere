@@ -24,8 +24,9 @@
   /* align-items: center; */
   /* justify-content: flex-start; */
   gap: 10px;
-  width: 355px;
-  margin: 0 0 0 1rem;
+  width: 350px;
+  margin: 0 auto;
+  /* margin: 0 0 0 1rem; */
 }
 
 .unique-img-holder {
@@ -120,7 +121,7 @@
 @media screen and (max-width: 1130px) {
   .unique-grid {
     grid-template-columns: repeat(3, 33%);
-    margin: 0 1rem 0 0;
+    margin: 0 0 0 0;
   }
 }
 
@@ -134,7 +135,7 @@
 
 @media screen and (max-width: 920px) {
   .unique-grid {
-    grid-template-columns: repeat(1, 80%);
+    grid-template-columns: repeat(1, 100%);
     justify-items: center;
   }
 

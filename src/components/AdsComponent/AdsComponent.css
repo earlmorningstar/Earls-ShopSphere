@@ -6,14 +6,21 @@
   padding: 8px 1rem;
   background-color: #232f3e;
   font-family: "Manrope", sans-serif;
-}
-
-.adsParent > div {
-  background-color: #232f3e;
   color: #ffffff;
 }
 
-.ads {
+@media screen and (max-width: 980px) {
+  .adsParent {
+    display: none;
+  }
+}
+
+/* .adsParent > div {
+  background-color: #232f3e;
+  color: #ffffff;
+} */
+
+/* .ads {
   display: flex;
   gap: 10px;
 }
@@ -28,4 +35,4 @@
 .ads > span:hover {
   text-decoration: underline;
   text-underline-offset: 7px;
-}
+} */

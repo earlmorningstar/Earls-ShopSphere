@@ -2,15 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap");
 
 .carouselParent {
-  /* position: relative; */
   width: 50%;
-  /* height: 70vh; */
   margin: 0 1.5rem;
 }
 
 .slideImagesParent {
   border: 0.5px solid none;
-  /* height: 85vh; */
   width: 100%;
 }
 
@@ -24,12 +21,9 @@
 }
 
 .overallH {
-  /* background: url('https://images.pexels.com/photos/1697220/pexels-photo-1697220.jpeg?auto=compress&cs=tinysrgb&w=600'); */
-  /* background: url('https://images.pexels.com/photos/1697214/pexels-photo-1697214.jpeg?auto=compress&cs=tinysrgb&w=600'); */
-  background-size: cover;
+ background-size: cover;
   background-position: center;
   width: 100%;
-  /* height: 100vh; */
   padding: 20px 10px 30px 10px;
   display: flex;
   gap: 5px;
@@ -142,7 +136,7 @@
     height: 11vh;
   }
   .top-deals-styles {
-    padding: 12px 10px;
+    padding: 20px 10px;
   }
 }
 
@@ -152,6 +146,12 @@
   }
   .image-container {
     height: 8vh;
+  }
+}
+
+@media screen and (max-width: 1088px){
+  .top-deals-styles {
+    padding: 12px 10px;
   }
 }
 
@@ -183,7 +183,8 @@
   }
 
   .top-deals-styles {
-    padding: 20px 10px;
+    padding: 25px 10px;
+    gap: 30px;
   }
 }
 
@@ -198,6 +199,31 @@
 
   .top-deals-styles > h3 {
     font-size: 16px;
+  }
+
+  .top-deals-grid-3 {
+    display: none;
+  }
+
+  .top-deals-grid-2 {
+    display: none;
+  }
+
+  .top-deals-flex-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carouselParent {
+    margin: 0 auto;
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 883px){
+  .top-deals-styles {
+    padding: 10px 10px;
+    gap: 20px;
   }
 }
 
@@ -222,16 +248,5 @@
 }
 
 @media screen and (max-width: 600px) {
-  .top-deals-flex-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .top-deals-grid-3 {
-    display: none;
-  }
-
-  .top-deals-grid-2 {
-    display: none;
-  }
+  
 }

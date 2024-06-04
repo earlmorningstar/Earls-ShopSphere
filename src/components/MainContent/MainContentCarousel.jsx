@@ -10,7 +10,6 @@ import fourthSlide from "../../assets/Style10.jpg";
 import fifthSlide from "../../assets/Style11.jpg";
 import sixSlide from "../../assets/Style12.jpg";
 
-
 const images = [
   { src: firstSlide, alt: "Image 1" },
   { src: thirdSlide, alt: "Image 3" },
@@ -32,25 +31,25 @@ export default function MainContentCarousel() {
   //   // prevArrow: <PrevArrow />,
   // };
 
-    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    useEffect(() => {
-        const randomIndex = Math.floor(Math.random() * images.length);
-        setCurrentImageIndex(randomIndex);
-    }, []);
+  useEffect(() => {
+    const randomIndex = Math.floor(Math.random() * images.length);
+    setCurrentImageIndex(randomIndex);
+  }, []);
 
   return (
     <div className="overallH">
       <div className="carouselParent">
         <div className="slideImagesContainer">
-          <Slider
-            // {...carouselSettings}
-             >
-
+          <Slider>
             {images.map((index) => (
               <div className="slideImagesParent" key={index}>
-                <img className="slideImges" src={images[currentImageIndex].src} alt={images[currentImageIndex].alt} />
-                {/* <img className="slideImges" src={image.src} alt={image.alt} /> */}
+                <img
+                  className="slideImges"
+                  src={images[currentImageIndex].src}
+                  alt={images[currentImageIndex].alt}
+                />
               </div>
             ))}
           </Slider>
