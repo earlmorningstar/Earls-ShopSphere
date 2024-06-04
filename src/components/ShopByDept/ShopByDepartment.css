@@ -13,9 +13,10 @@
 .sbd-parent {
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  grid-column-gap: 8px;
+  grid-column-gap: 4px;
   grid-row-gap: 10px;
-  margin: 0 1rem;
+  justify-content: center;
+  margin: 0 1.5em;
 }
 
 .sbd-direct-divChild {
@@ -25,7 +26,7 @@
   display: flex;
   flex-direction: column;
   border: 1px solid black;
-  padding: 9px;
+  padding: 5px;
   border-radius: 8px;
   gap: 10px;
 }
@@ -52,7 +53,6 @@
   gap: 4px;
   list-style-type: none;
   font-family: "Work Sans", sans-serif;
-  font-optical-sizing: auto;
   font-size: 11px;
   font-weight: 500;
 }
@@ -68,14 +68,20 @@
 
 @media screen and (max-width: 910px) {
   .sbd-parent {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 17em);
+  }
+  .sbd-direct-divChild > span {
+    font-weight: 500;
+    font-size: 16px;
   }
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 890px) {
   .sbd-direct-divChild > ul {
     display: none;
   }
-
+  .sbd-direct-divChild{
+    width: 14em;
+  }
   
 }

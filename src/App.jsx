@@ -10,7 +10,7 @@ import MainCollection from "./components/Collection/MainCollection.jsx";
 import BestSellingProd from "./components/BestSellingProduct/BestSellingProd.jsx";
 import ProsOfShopping from "./components/ProsOfShoppingWithUs/ProsOfShopping.jsx";
 import UniqueItemsHolder from "./components/UniqueItems/UniqueItemsHolder.jsx";
-import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx";
+// import MainShopByDepartment from "./components/ShopByDept/MainShopByDepartment.jsx";
 import FooterHolder from "./components/Footer/FooterHolder.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Checkout from "./components/Checkout.jsx";
@@ -31,7 +31,7 @@ function App() {
           <Likes />
           <Checkout />
           <UniqueItemsHolder />
-          <MainShopByDepartment />
+          {/* <MainShopByDepartment /> */}
           <ProsOfShopping />
           <FooterHolder />
         </CartContextProvider>

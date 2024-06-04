@@ -22,6 +22,7 @@
   font-size: 15px;
   font-weight: 500;
 }
+
 .cart h2 {
   font-weight: 700;
   margin: 1rem 0;
@@ -105,3 +106,14 @@
   background-color: #f0f0f0;
   color: #353433;
 } */
+
+
+@media screen and (max-width: 790px) {
+  .cart-price {
+    font-size: 12px;
+  }
+
+  .cart {
+    padding: 6px 10px;
+  }
+}
