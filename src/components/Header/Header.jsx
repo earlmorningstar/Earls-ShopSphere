@@ -49,7 +49,7 @@ export default function Header() {
           <ShoppingCart />
         </div>
         <div className="hamburger-menu" onClick={toggleDropdown}>
-          {isDropdownOpen ? <AiOutlineClose size={26} color="#ffffff" /> : <RxHamburgerMenu size={26} />}
+          {isDropdownOpen ? <AiOutlineClose size={26} color="#ffffff" /> : <RxHamburgerMenu size={26} color="#ffffff" />}
         </div>
       </nav>
       {isDropdownOpen && (

@@ -54,7 +54,7 @@ export default function CollectionProduct({ fit }) {
           />{" "}
           Add
         </button>
-        <button className="coll-prod-parent-btn">View Item</button>
+        {/* <button className="coll-prod-parent-btn">View Item</button> */}
       </span>
     </div>
   );

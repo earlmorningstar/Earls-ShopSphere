@@ -57,7 +57,7 @@ export default function BestSellingCarousel({ gadget }) {
 
         <div className="bs-span-btn">
           <span>{currrencyFormatter.format(gadget.price)}</span>
-          <button>View Item</button>
+          {/* <button>View Item</button> */}
           <button onClick={handleAddItemToCart}>
             <GoPlus size={15} color="#ffffff" /> Add
           </button>

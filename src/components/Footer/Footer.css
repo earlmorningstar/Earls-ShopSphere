@@ -98,3 +98,13 @@
     gap: 20px;
   }
 }
+
+@media screen and (max-width: 525px) {
+  .signUp-style > input {
+    padding: 8px 4px;
+}
+
+.signUp-style > button {
+    padding: 9px 4px;
+}
+}

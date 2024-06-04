@@ -137,10 +137,41 @@
   .unique-grid {
     grid-template-columns: repeat(1, 100%);
     justify-items: center;
+    grid-row-gap: 6px;
   }
 
   .uniqueItem-parent {
     padding: 20px;
     width: 650px;
+  }
+
+  @media screen and (max-width: 690px){
+    .uniqueItem-parent {
+      width: 620px;
+    }
+  }
+
+  @media screen and (max-width: 650px){
+    .uniqueItem-parent {
+      width: 600px;
+    }
+  }
+
+  @media screen and (max-width: 620px){
+    .uniqueItem-parent {
+      width: 580px;
+    }
+  }
+
+  @media screen and (max-width: 590px){
+    .uniqueItem-parent {
+      width: 550px;
+    }
+  }
+
+  @media screen and (max-width: 560px){
+    .uniqueItem-parent {
+      width: 500px;
+    }
   }
 }
