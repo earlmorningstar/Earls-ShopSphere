@@ -1,0 +1,43 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "frontend/package.json",
+        "use": "@vercel/static-build",
+        "config": {
+          "distDir": "frontend/build"
+        }
+      },
+      {
+        "src": "api/**/*.js",
+        "use": "@vercel/node"
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/fits",
+        "dest": "/api/fits.js"
+      },
+      {
+        "src": "/api/gadgets",
+        "dest": "/api/gadgets.js"
+      },
+      {
+        "src": "/api/uniqueItem",
+        "dest": "/api/uniqueItem.js"
+      },
+      {
+        "src": "/api/orders",
+        "dest": "/api/orders.js"
+      },
+      {
+        "src": "/public/(.*)",
+        "dest": "/api/public/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "frontend/$1"
+      }
+    ]
+  }
+  
