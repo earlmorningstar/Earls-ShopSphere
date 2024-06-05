@@ -73,7 +73,7 @@ export default function UniqueItems({ uniqueItem }) {
   function generateRandNumb() {
     return Math.floor(Math.random() * (1000 - 400 + 1)) + 400;
   }
-
+  // console.log(generateRandNumb);
   // function generateRandAmount() {
   //   return Math.floor(Math.random() * (150 - 450 + 1)) + 450;
   // }
