@@ -3,6 +3,7 @@ node_modules/
 .next/
 .vercel/
 dist/
+build/
 
 # Ignore logs and temporary files
 *.log
