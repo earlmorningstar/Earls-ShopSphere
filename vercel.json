@@ -1,43 +1,30 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "frontend/package.json",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "frontend/build"
-        }
-      },
-      {
-        "src": "api/**/*.js",
-        "use": "@vercel/node"
+  "version": 2,
+  "builds": [
+    {
+      "src": "backend/app.js",
+      "use": "@vercel/node"
+    },
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "build"
       }
-    ],
-    "routes": [
-      {
-        "src": "/api/fits",
-        "dest": "/api/fits.js"
-      },
-      {
-        "src": "/api/gadgets",
-        "dest": "/api/gadgets.js"
-      },
-      {
-        "src": "/api/uniqueItem",
-        "dest": "/api/uniqueItem.js"
-      },
-      {
-        "src": "/api/orders",
-        "dest": "/api/orders.js"
-      },
-      {
-        "src": "/public/(.*)",
-        "dest": "/api/public/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "frontend/$1"
-      }
-    ]
-  }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "backend/app.js"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/$1"
+    }
+  ]
+}
+
+
+
   

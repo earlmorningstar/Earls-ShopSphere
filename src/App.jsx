@@ -15,13 +15,15 @@ import FooterHolder from "./components/Footer/FooterHolder.jsx";
 import Cart from "./components/Cart/Cart.jsx";
 import Checkout from "./components/Checkout.jsx";
 import Likes from "./components/Favorited/Likes.jsx";
+// import ErrorBoundary from "./components/ErrorBoundary.jsx";
 
 function App() {
   return (
     <UserProgressContextProvider>
       <LikedItemsContextProvider>
         <CartContextProvider>
-          <AdsComponent />
+          {/* <ErrorBoundary> */}
+            <AdsComponent />
           <Header />
           <DealsLine />
           <MainContentCarousel />
@@ -34,6 +36,7 @@ function App() {
           {/* <MainShopByDepartment /> */}
           <ProsOfShopping />
           <FooterHolder />
+          {/* </ErrorBoundary> */}
         </CartContextProvider>
       </LikedItemsContextProvider>
     </UserProgressContextProvider>

@@ -1,23 +1,21 @@
 import UniqueItems from "./UniqueItems";
 import "./UniqueItems.css";
-
 import { useState, useEffect } from "react";
-
-const apiUrl = process.env.REACT_APP_API_URL;
 
 export default function UniqueItemsHolder() {
   const [loadedUniqueItems, setLoadedUniqueItems] = useState([]);
 
   useEffect(() => {
     async function fetchUniqueItems() {
-      const response = await fetch(`${apiUrl}/api/uniqueItem`);
-
+      const response = await fetch(
+        `${import.meta.env.VITE_API_URL}/uniqueItem`
+      );
       if (response.ok) {
-        //....
+        const uniqueItems = await response.json();
+        setLoadedUniqueItems(uniqueItems);
+      } else {
+        console.error("Failed to fetch unique items");
       }
-
-      const uniqueItem = await response.json();
-      setLoadedUniqueItems(uniqueItem);
     }
 
     fetchUniqueItems();
@@ -40,12 +38,14 @@ export default function UniqueItemsHolder() {
 
 // import { useState, useEffect } from "react";
 
+// // const apiUrl = process.env.REACT_APP_API_URL;
+
 // export default function UniqueItemsHolder() {
 //   const [loadedUniqueItems, setLoadedUniqueItems] = useState([]);
 
 //   useEffect(() => {
 //     async function fetchUniqueItems() {
-//       const response = await fetch("http://earls-shopsphere-e-commerce.vercel.app/api/uniqueItem");
+//       const response = await fetch(`${import.meta.env.VITE_API_URL}/uniqueItem`);
 
 //       if (response.ok) {
 //         //....

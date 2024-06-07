@@ -8,8 +8,6 @@ import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
 import { FaHeart } from "react-icons/fa";
 
-const apiUrl = process.env.REACT_APP_API_URL;
-
 export default function UniqueItems({ uniqueItem }) {
   const cartCtx = useContext(CartContext);
   const likedItemCtx = useContext(LikedItemsContext);
@@ -40,16 +38,8 @@ export default function UniqueItems({ uniqueItem }) {
     minutes: 0,
     seconds: 0,
   });
-  const [randNumb, setRandNumb] = useState(0);
-  // const [randAmount, setRandAmount] = useState(0);
 
   useEffect(() => {
-    const newRandNumb = generateRandNumb();
-    setRandNumb(newRandNumb);
-
-    // const newRandAmount = generateRandAmount();
-    // setRandAmount(newRandAmount);
-
     const targetDate = new Date("2024-12-31T00:00:00").getTime();
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -73,20 +63,15 @@ export default function UniqueItems({ uniqueItem }) {
   function generateRandNumb() {
     return Math.floor(Math.random() * (1000 - 400 + 1)) + 400;
   }
-  // console.log(generateRandNumb);
-  // function generateRandAmount() {
-  //   return Math.floor(Math.random() * (150 - 450 + 1)) + 450;
-  // }
 
   return (
     <div className="uniqueItem-parent">
       <div className="unique-img-holder">
         <img
-          src={`${apiUrl}/public/images/${uniqueItem.image}`}
+          src={`${import.meta.env.VITE_API_URL}/${uniqueItem.image}`}
           alt={uniqueItem.item_name}
         />
       </div>
-
       <div className="unique-infos">
         <h3>{uniqueItem.item_name}</h3>
         <h4>{uniqueItem.description}</h4>
@@ -101,7 +86,6 @@ export default function UniqueItems({ uniqueItem }) {
           </span>
           <h4>{currrencyFormatter.format(uniqueItem.price)}</h4>
         </span>
-
         <div className="uniqueCountdown">
           <p>Days: {countdown.days}</p>
           <p>Hours: {countdown.hours}</p>
@@ -109,7 +93,7 @@ export default function UniqueItems({ uniqueItem }) {
           <p>Secs: {countdown.seconds}</p>
         </div>
         <h5>
-          Total Item Purchase:<i> {randNumb}</i>
+          Total Item Purchase:<i> {generateRandNumb()}</i>
         </h5>
         <button onClick={handleAddItemToCart}>
           <GoPlus />
@@ -129,6 +113,8 @@ export default function UniqueItems({ uniqueItem }) {
 // import Stack from "@mui/material/Stack";
 // import { GoPlus } from "react-icons/go";
 // import { FaHeart } from "react-icons/fa";
+
+// // const apiUrl = process.env.REACT_APP_API_URL;
 
 // export default function UniqueItems({ uniqueItem }) {
 //   const cartCtx = useContext(CartContext);
@@ -193,7 +179,7 @@ export default function UniqueItems({ uniqueItem }) {
 //   function generateRandNumb() {
 //     return Math.floor(Math.random() * (1000 - 400 + 1)) + 400;
 //   }
-
+//   // console.log(generateRandNumb);
 //   // function generateRandAmount() {
 //   //   return Math.floor(Math.random() * (150 - 450 + 1)) + 450;
 //   // }
@@ -202,7 +188,7 @@ export default function UniqueItems({ uniqueItem }) {
 //     <div className="uniqueItem-parent">
 //       <div className="unique-img-holder">
 //         <img
-//           src={`http://earls-shopsphere-e-commerce.vercel.app/public/images/${uniqueItem.image}`}
+//           src={`${import.meta.env.VITE_API_URL}/${uniqueItem.image}`}
 //           alt={uniqueItem.item_name}
 //         />
 //       </div>
@@ -217,7 +203,7 @@ export default function UniqueItems({ uniqueItem }) {
 //         </div>
 //         <span className="price-like">
 //           <span onClick={handleToggleAddLikedItem}>
-//             <FaHeart size={16} color={isLiked ? "red" : "white"}/>
+//             <FaHeart size={16} color={isLiked ? "red" : "white"} />
 //           </span>
 //           <h4>{currrencyFormatter.format(uniqueItem.price)}</h4>
 //         </span>

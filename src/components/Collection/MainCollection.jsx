@@ -5,14 +5,8 @@ import "./MainCollection.css";
 
 const requestConfig = {};
 
-const apiUrl = process.env.REACT_APP_API_URL;
-
 export default function MainCollection() {
-  const {
-    data: loadedFits,
-    isLoading,
-    error,
-  } = useHttp((`${apiUrl}/api/fits`), requestConfig, []);
+  const { data: loadedFits, isLoading, error } = useHttp(`${import.meta.env.VITE_API_URL}/fits`, requestConfig, []);
 
   if (isLoading) {
     return <p>Fetching Items...</p>;
@@ -25,7 +19,6 @@ export default function MainCollection() {
   return (
     <>
       <h3 className="section-heading">Featured Collection</h3>
-
       <div className="coll-Prod-flex">
         {loadedFits.map((fit) => (
           <CollectionProduct key={fit.id} fit={fit} />
@@ -39,6 +32,7 @@ export default function MainCollection() {
 
 
 
+
 // import useHttp from "../../../hooks/useHttp.js";
 // import Error from "../Error.jsx";
 // import CollectionProduct from "./CollectionProduct.jsx";
@@ -46,12 +40,14 @@ export default function MainCollection() {
 
 // const requestConfig = {};
 
+// // const apiUrl = process.env.REACT_APP_API_URL;
+
 // export default function MainCollection() {
 //   const {
 //     data: loadedFits,
 //     isLoading,
 //     error,
-//   } = useHttp("http://earls-shopsphere-e-commerce.vercel.app/api/fits", requestConfig, []);
+//   } = useHttp((`${import.meta.env.VITE_API_URL}/fits`), requestConfig, []);
 
 //   if (isLoading) {
 //     return <p>Fetching Items...</p>;
@@ -73,6 +69,7 @@ export default function MainCollection() {
 //     </>
 //   );
 // }
+
 
 
 // import useHttp from "../../../hooks/useHttp.js";

@@ -7,8 +7,6 @@ import "./MainCollection.css";
 import { FaHeart } from "react-icons/fa";
 import { GoPlus } from "react-icons/go";
 
-const apiUrl = process.env.REACT_APP_API_URL;
-
 export default function CollectionProduct({ fit }) {
   const cartCtx = useContext(CartContext);
   const likedItemCtx = useContext(LikedItemsContext);
@@ -36,7 +34,7 @@ export default function CollectionProduct({ fit }) {
   return (
     <div className="coll-prod-parent">
       <div className="coll-prod-img">
-        <img src={`${apiUrl}/public/images/${fit.image}`} alt={fit.item_name} />
+        <img src={`${import.meta.env.VITE_API_URL}/${fit.image}`} alt={fit.item_name} />
       </div>
       <div className="coll-prod-price-star-parent">
         <span>{currrencyFormatter.format(fit.price)}</span>
@@ -50,18 +48,12 @@ export default function CollectionProduct({ fit }) {
       </div>
       <span>
         <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>
-          <GoPlus
-            size={13}
-            color="#f7f7f7"
-          />{" "}
-          Add
+          <GoPlus size={13} color="#f7f7f7" /> Add
         </button>
-        {/* <button className="coll-prod-parent-btn">View Item</button> */}
       </span>
     </div>
   );
 }
-
 
 
 
@@ -74,6 +66,8 @@ export default function CollectionProduct({ fit }) {
 // import "./MainCollection.css";
 // import { FaHeart } from "react-icons/fa";
 // import { GoPlus } from "react-icons/go";
+
+// // const apiUrl = process.env.REACT_APP_API_URL;
 
 // export default function CollectionProduct({ fit }) {
 //   const cartCtx = useContext(CartContext);
@@ -102,7 +96,7 @@ export default function CollectionProduct({ fit }) {
 //   return (
 //     <div className="coll-prod-parent">
 //       <div className="coll-prod-img">
-//         <img src={`http://earls-shopsphere-e-commerce.vercel.app/public/images/${fit.image}`} alt={fit.item_name} />
+//         <img src={`${import.meta.env.VITE_API_URL}/${fit.image}`} alt={fit.item_name} />
 //       </div>
 //       <div className="coll-prod-price-star-parent">
 //         <span>{currrencyFormatter.format(fit.price)}</span>
@@ -122,12 +116,10 @@ export default function CollectionProduct({ fit }) {
 //           />{" "}
 //           Add
 //         </button>
-//         {/* <button className="coll-prod-parent-btn">View Item</button> */}
 //       </span>
 //     </div>
 //   );
 // }
-
 
 
 
