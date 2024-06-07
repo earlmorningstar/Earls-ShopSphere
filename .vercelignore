@@ -3,15 +3,14 @@ node_modules/
 .next/
 .vercel/
 dist/
-build/
 
 # Ignore logs and temporary files
 *.log
 .env.local
 
 # Make sure api directory is not ignored
-!api/
-!api/*.js
+!backend/
+!backend/*.js
 
 
 
