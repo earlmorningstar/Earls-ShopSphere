@@ -19,9 +19,6 @@ export default function BestSellingProd() {
       } else {
         console.error("Failed to fetch gadgets");
       }
-
-      const gadgets = await response.json();
-      setLoadedGadgets(gadgets);
     }
 
     fetchGadgets();
