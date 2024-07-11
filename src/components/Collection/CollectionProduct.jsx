@@ -34,7 +34,7 @@ export default function CollectionProduct({ fit }) {
   return (
     <div className="coll-prod-parent">
       <div className="coll-prod-img">
-        <img src={`${import.meta.env.VITE_API_URL}/${fit.image}`} alt={fit.item_name} />
+        <img src={`http://localhost:3001/${fit.image}`} alt={fit.item_name} />
       </div>
       <div className="coll-prod-price-star-parent">
         <span>{currrencyFormatter.format(fit.price)}</span>
@@ -48,14 +48,17 @@ export default function CollectionProduct({ fit }) {
       </div>
       <span>
         <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>
-          <GoPlus size={13} color="#f7f7f7" /> Add
+          <GoPlus
+            size={13}
+            color="#f7f7f7"
+          />{" "}
+          Add
         </button>
+        {/* <button className="coll-prod-parent-btn">View Item</button> */}
       </span>
     </div>
   );
 }
-
-
 
 
 // import { useContext, useEffect, useState } from "react";
@@ -123,6 +126,7 @@ export default function CollectionProduct({ fit }) {
 
 
 
+
 // import { useContext, useEffect, useState } from "react";
 // import CartContext from "../../store/CartContext.jsx";
 // import LikedItemsContext from "../../store/LikedItemsContext.jsx";
@@ -159,7 +163,7 @@ export default function CollectionProduct({ fit }) {
 //   return (
 //     <div className="coll-prod-parent">
 //       <div className="coll-prod-img">
-//         <img src={`http://localhost:3001/${fit.image}`} alt={fit.item_name} />
+//         <img src={`${import.meta.env.VITE_API_URL}/${fit.image}`} alt={fit.item_name} />
 //       </div>
 //       <div className="coll-prod-price-star-parent">
 //         <span>{currrencyFormatter.format(fit.price)}</span>
@@ -173,13 +177,8 @@ export default function CollectionProduct({ fit }) {
 //       </div>
 //       <span>
 //         <button className="coll-prod-parent-btn" onClick={handleAddItemToCart}>
-//           <GoPlus
-//             size={13}
-//             color="#f7f7f7"
-//           />{" "}
-//           Add
+//           <GoPlus size={13} color="#f7f7f7" /> Add
 //         </button>
-//         {/* <button className="coll-prod-parent-btn">View Item</button> */}
 //       </span>
 //     </div>
 //   );

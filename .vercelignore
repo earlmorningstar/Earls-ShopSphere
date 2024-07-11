@@ -1,4 +1,4 @@
-# Ignore node_modules and build output directories
+<!-- # Ignore node_modules and build output directories
 node_modules/
 .next/
 .vercel/
@@ -11,7 +11,7 @@ build/
 
 # Make sure api directory is not ignored
 !backend/
-!backend/*.js
+!backend/*.js -->
 
 
 

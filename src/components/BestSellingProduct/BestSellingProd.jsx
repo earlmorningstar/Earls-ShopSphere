@@ -4,21 +4,19 @@ import BestSellingCarousel from "./BestSellingCarousel.jsx";
 import "./BestSelling.css";
 import Slider from "react-slick";
 
-// const apiUrl = process.env.REACT_APP_API_URL;
-
 export default function BestSellingProd() {
   const [loadedGadgets, setLoadedGadgets] = useState([]);
 
   useEffect(() => {
     async function fetchGadgets() {
-      const response = await fetch(`${import.meta.env.VITE_API_URL}/gadgets`);
+      const response = await fetch("http://localhost:3001/gadgets");
 
       if (response.ok) {
-        const gadgets = await response.json();
-        setLoadedGadgets(gadgets);
-      } else {
-        console.error("Failed to fetch gadgets");
+        //....
       }
+
+      const gadgets = await response.json();
+      setLoadedGadgets(gadgets);
     }
 
     fetchGadgets();
@@ -38,7 +36,7 @@ export default function BestSellingProd() {
           slidesToShow: 3,
           slidesToScroll: 3,
           infinite: true,
-          
+          // dots: true,
         },
       },
       {
@@ -73,26 +71,27 @@ export default function BestSellingProd() {
   );
 }
 
-
 // import { useState, useEffect } from "react";
 
 // import BestSellingCarousel from "./BestSellingCarousel.jsx";
 // import "./BestSelling.css";
 // import Slider from "react-slick";
 
+// // const apiUrl = process.env.REACT_APP_API_URL;
+
 // export default function BestSellingProd() {
 //   const [loadedGadgets, setLoadedGadgets] = useState([]);
 
 //   useEffect(() => {
 //     async function fetchGadgets() {
-//       const response = await fetch("http://localhost:3001/gadgets");
+//       const response = await fetch(`${import.meta.env.VITE_API_URL}/gadgets`);
 
 //       if (response.ok) {
-//         //....
+//         const gadgets = await response.json();
+//         setLoadedGadgets(gadgets);
+//       } else {
+//         console.error("Failed to fetch gadgets");
 //       }
-
-//       const gadgets = await response.json();
-//       setLoadedGadgets(gadgets);
 //     }
 
 //     fetchGadgets();
@@ -112,7 +111,7 @@ export default function BestSellingProd() {
 //           slidesToShow: 3,
 //           slidesToScroll: 3,
 //           infinite: true,
-//           // dots: true,
+          
 //         },
 //       },
 //       {

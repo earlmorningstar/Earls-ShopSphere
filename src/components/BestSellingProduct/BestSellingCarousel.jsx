@@ -1,14 +1,11 @@
 import { useContext, useEffect, useState } from "react";
 import CartContext from "../../store/CartContext";
 import LikedItemsContext from "../../store/LikedItemsContext.jsx";
-
 import { currrencyFormatter } from "../../Util/formatter.js";
 import Rating from "@mui/material/Rating";
 import Stack from "@mui/material/Stack";
 import { GoPlus } from "react-icons/go";
 import { FaHeart } from "react-icons/fa";
-
-// const apiUrl = process.env.REACT_APP_API_URL;
 
 export default function BestSellingCarousel({ gadget }) {
   const cartCtx = useContext(CartContext);
@@ -38,7 +35,7 @@ export default function BestSellingCarousel({ gadget }) {
     <div className="bestSelling-holdingDiv">
       <div className="bestSelling-ImageParent">
         <img
-          src={`${import.meta.env.VITE_API_URL}/${gadget.image}`}
+          src={`http://localhost:3001/${gadget.image}`}
           alt={gadget.item_name}
         />
       </div>
@@ -59,12 +56,15 @@ export default function BestSellingCarousel({ gadget }) {
 
         <div className="bs-span-btn">
           <span>{currrencyFormatter.format(gadget.price)}</span>
+          {/* <button>View Item</button> */}
           <button onClick={handleAddItemToCart}>
             <GoPlus size={15} color="#ffffff" /> Add
           </button>
         </div>
       </div>
     </div>
+
+    // <div className="best-selling-slider-container">
   );
 }
 
@@ -78,6 +78,8 @@ export default function BestSellingCarousel({ gadget }) {
 // import Stack from "@mui/material/Stack";
 // import { GoPlus } from "react-icons/go";
 // import { FaHeart } from "react-icons/fa";
+
+// // const apiUrl = process.env.REACT_APP_API_URL;
 
 // export default function BestSellingCarousel({ gadget }) {
 //   const cartCtx = useContext(CartContext);
@@ -107,7 +109,7 @@ export default function BestSellingCarousel({ gadget }) {
 //     <div className="bestSelling-holdingDiv">
 //       <div className="bestSelling-ImageParent">
 //         <img
-//           src={`http://localhost:3001/${gadget.image}`}
+//           src={`${import.meta.env.VITE_API_URL}/${gadget.image}`}
 //           alt={gadget.item_name}
 //         />
 //       </div>
@@ -128,14 +130,11 @@ export default function BestSellingCarousel({ gadget }) {
 
 //         <div className="bs-span-btn">
 //           <span>{currrencyFormatter.format(gadget.price)}</span>
-//           {/* <button>View Item</button> */}
 //           <button onClick={handleAddItemToCart}>
 //             <GoPlus size={15} color="#ffffff" /> Add
 //           </button>
 //         </div>
 //       </div>
 //     </div>
-
-//     // <div className="best-selling-slider-container">
 //   );
 // }
